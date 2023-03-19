@@ -8,7 +8,7 @@ body {
     left: 0 !important;
     width: 100% !important;
     z-index: 1000 !important;
-    box-shadow: 0 6px 5px rgba(255, 255, 255, 0.187) !important;
+    box-shadow: 0 3px 6px rgba(103, 103, 103, 0.63) !important;
   }
 
 h5 {
@@ -18,3 +18,72 @@ h5 {
 .icon {
     color: #00AACF;
 }
+
+.space-filler {
+    height: 150px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.custom-bg {
+    background-color: #171717 !important;
+}
+
+.custom-border {
+    --top-left-radius: 30px;
+    --top-right-radius: 30px;
+    --bottom-left-radius: 15px;
+    --bottom-right-radius: 15px;
+    border-top-left-radius: var(--top-left-radius);
+    border-top-right-radius: var(--top-right-radius);
+    border-bottom-left-radius: var(--bottom-left-radius);
+    border-bottom-right-radius: var(--bottom-right-radius);
+    border: 2px solid #292929 !important;
+}
+
+.custom-textfield-bg {
+    background-color: #4C4C4C !important;
+    border-color: #4C4C4C !important;
+    border-radius: 30px !important;
+    color: white !important;
+}
+
+.btn {
+    background-color: #009CCD !important;
+    color: white !important;
+    border-radius: 30px !important;
+    height: 30px !important;
+    line-height: .5 !important;
+}
+
+.card-border {
+    --top-left-radius: 30px !important;
+    --top-right-radius: 30px !important;
+    --bottom-left-radius: 15px !important;
+    --bottom-right-radius: 15px !important;
+    border-top-left-radius: var(--top-left-radius) !important;
+    border-top-right-radius: var(--top-right-radius) !important;
+    border-bottom-left-radius: var(--bottom-left-radius) !important;
+    border-bottom-right-radius: var(--bottom-right-radius) !important;
+    border: 2px solid #686868 !important;
+}
+
+.card-img-top {
+    --top-left-radius: 30px !important;
+    --top-right-radius: 30px !important;
+    --bottom-left-radius: 0px !important;
+    --bottom-right-radius: 0px !important;
+    border-top-left-radius: var(--top-left-radius) !important;
+    border-top-right-radius: var(--top-right-radius) !important;
+    border-bottom-left-radius: var(--bottom-left-radius) !important;
+    border-bottom-right-radius: var(--bottom-right-radius) !important;
+}
+
+.custom-hr {
+    height: 5px;
+    width: 210px;
+    background-color: #2E2E2E;
+    margin: 10px 0;
+}
+  

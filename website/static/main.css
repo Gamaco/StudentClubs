@@ -86,3 +86,14 @@ h5 {
     background-color: #2E2E2E;
     margin: 10px 0;
 }
+
+.cards-container {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+  }
+
+.card {
+  width: 100% !important;
+  max-width: 300px !important;
+  margin: 0 auto !important;
+}

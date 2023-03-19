@@ -4,6 +4,8 @@
 
 {% block content %}
 
+<div class="row">
+  <div class="col-md-6">
     <div class="card card-border custom-bg" style="max-width: 300px;">
       <div class="card-body">
         <h3 class="card-title text-white">School Information</h3>
@@ -11,22 +13,26 @@
         <form>
           <div class="form-group mb-3">
             <label for="schoolName" class="form-label">School Name</label>
-            <input type="text" class="form-control form-control-sm custom-textfield-bg" id="schoolName" placeholder="Enter school name">
+            <input type="text" class="form-control form-control-sm custom-textfield-bg" id="schoolName"
+              placeholder="Enter school name">
           </div>
-  
+
           <div class="form-group mb-3">
             <label for="country" class="form-label">Country</label>
-            <input type="text" class="form-control form-control-sm custom-textfield-bg" id="country" placeholder="Enter country">
+            <input type="text" class="form-control form-control-sm custom-textfield-bg" id="country"
+              placeholder="Enter country">
           </div>
-  
+
           <div class="form-group mb-3">
             <label for="town" class="form-label">Town</label>
-            <input type="text" class="form-control form-control-sm custom-textfield-bg" id="town" placeholder="Enter town">
+            <input type="text" class="form-control form-control-sm custom-textfield-bg" id="town"
+              placeholder="Enter town">
           </div>
-  
+
           <div class="form-group mb-4">
             <label for="category" class="form-label">Category</label>
-            <input type="text" class="form-control form-control-sm custom-textfield-bg" id="category" placeholder="Enter category">
+            <input type="text" class="form-control form-control-sm custom-textfield-bg" id="category"
+              placeholder="Enter category">
           </div>
         </form>
         <form>
@@ -34,17 +40,23 @@
         </form>
       </div>
     </div>
+  </div>
 
+  <div class="col-md-6">
     <div class="card card-border custom-bg" style="max-width: 300px;">
-      <img src="static\8e9ca35b-f25c-426a-bb40-338feabff9cb.webp" class="card-img-top" alt="..." style="width: 100%; height: 200px;">
+      <img src="static\8e9ca35b-f25c-426a-bb40-338feabff9cb.webp" class="card-img-top" alt="..."
+        style="width: 100%; height: 200px;">
       <div class="card-body">
         <h5 class="card-title text-white">Dancing Chaos</h5>
         <div class="custom-hr"></div>
-        <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea laborum sit optio, eaque tempore consequatur amet officiis recusandae aliquam eligendi neque aspernatur.</p>
+        <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea laborum sit optio, eaque
+          tempore consequatur amet officiis recusandae aliquam eligendi neque aspernatur.</p>
         <form>
           <button class="btn">View</button>
         </form>
       </div>
     </div>
+  </div>
+</div>
 
 {% endblock %}

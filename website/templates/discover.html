@@ -4,56 +4,28 @@
 
 {% block content %}
 
-<div style="max-width: 800px; margin: 0 auto;">
-  <div class="row row-cols-1 row-cols-md-3 g-2 justify-content-center">
+<!-- Main container -->
+<div style="max-width: 1000px; margin: 0 auto;">
 
-
-    <div class="col-sm-6 col-md-4">
-      <div class="card card-border custom-bg">
-        <div class="card-body">
-          <h3 class="card-title text-white">School Information</h3>
-          <div class="custom-hr"></div>
-          <form>
-            <div class="form-group mb-3">
-              <label for="schoolName" class="form-label">School Name</label>
-              <input type="text" class="form-control form-control-sm custom-textfield-bg" id="schoolName"
-                placeholder="Enter school name">
-            </div>
-    
-            <div class="form-group mb-3">
-              <label for="country" class="form-label">Country</label>
-              <input type="text" class="form-control form-control-sm custom-textfield-bg" id="country"
-                placeholder="Enter country">
-            </div>
-    
-            <div class="form-group mb-3">
-              <label for="town" class="form-label">Town</label>
-              <input type="text" class="form-control form-control-sm custom-textfield-bg" id="town"
-                placeholder="Enter town">
-            </div>
-    
-            <div class="form-group mb-4">
-              <label for="category" class="form-label">Category</label>
-              <input type="text" class="form-control form-control-sm custom-textfield-bg" id="category"
-                placeholder="Enter category">
-            </div>
-          </form>
-          <form>
-            <button class="btn">Search</button>
-          </form>
-        </div>
-      </div>
-    </div>
+  <div class="row row-cols-1 row-cols-md-4">
 
     {% for club in clubs %}
-    <div class="col-sm-6 col-md-4">
-      <div class="card card-border custom-bg">
-        <img src={{ club.image }} class="card-img-top" alt="..."
-          style="width: 100%; height: 200px;">
+    <div class="col mb-4">
+      <div class="card h-100 custom-bg">
+        <img src={{ club.image }} class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title text-white">{{ club.title }}</h5>
+          <div class="card-header">
+            <h5 class="card-title text-white"> {{ club.name }} </h5>
+          </div>
           <div class="custom-hr"></div>
-          <p class="text-white">{{ club.description }}</p>
+          <p class="card-text text-white">{{ club.description }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item custom-bg text-secondary">School: <p class="text-white">{{ club.school }} </p></li>
+          <li class="list-group-item custom-bg text-secondary">Country: <p class="text-white">{{ club.country }} </p></li>
+          <li class="list-group-item custom-bg text-secondary">Category: <p class="text-white">{{ club.category }} </p></li>
+        </ul>
+        <div class="card-footer">
           <form>
             <button class="btn">View</button>
           </form>
@@ -62,7 +34,6 @@
     </div>
     {% endfor %}
 
-    <!-- No se toca -->
   </div>
 </div>
 

@@ -8,6 +8,9 @@ class Club(models.Model):
     image = models.CharField(max_length=200, default="website\static\sc_nophoto.webp")
     created_at =  models.DateTimeField(auto_now_add=True)
     students = ArrayField(models.IntegerField(), null=True)
+    school = models.CharField(max_length=50, default="undefined")
+    country = models.CharField(max_length=50, default="undefined")
+    category = models.CharField(max_length=50, default="undefined")
 
     def __str__(self):
         return self.name

@@ -6,35 +6,62 @@
 
 <!-- Main container -->
 <div style="max-width: 1000px; margin: 0 auto;">
-
-  <div class="row row-cols-1 row-cols-md-4">
-
-    {% for club in clubs %}
-    <div class="col mb-4">
-      <div class="card h-100 custom-bg">
-        <img src={{ club.image }} class="card-img-top" alt="...">
-        <div class="card-body">
-          <div class="card-header">
-            <h5 class="card-title text-white"> {{ club.name }} </h5>
+  <div class="container-fluid">
+    <div class="row flex-row flex-nowrap overflow-hidden">
+      <!-- Card container -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 card-container d-flex flex-nowrap">
+        {% for club in clubs %}
+        <div class="card h-100 custom-bg">
+          <img src={{ club.image }} class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="card-header">
+              <h5 class="card-title text-white">{{ club.name }}</h5>
+            </div>
+            <div class="custom-hr"></div>
+            <p class="card-text text-white">{{ club.description }}</p>
           </div>
-          <div class="custom-hr"></div>
-          <p class="card-text text-white">{{ club.description }}</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item custom-bg text-secondary">School: <p class="text-white">{{ club.school }} </p></li>
+            <li class="list-group-item custom-bg text-secondary">Country: <p class="text-white">{{ club.country }} </p></li>
+            <li class="list-group-item custom-bg text-secondary">Category: <p class="text-white">{{ club.category }} </p></li>
+          </ul>
+          <div class="card-footer">
+            <form>
+              <button class="btn">View</button>
+            </form>
+          </div>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item custom-bg text-secondary">School: <p class="text-white">{{ club.school }} </p></li>
-          <li class="list-group-item custom-bg text-secondary">Country: <p class="text-white">{{ club.country }} </p></li>
-          <li class="list-group-item custom-bg text-secondary">Category: <p class="text-white">{{ club.category }} </p></li>
-        </ul>
-        <div class="card-footer">
-          <form>
-            <button class="btn">View</button>
-          </form>
-        </div>
+        {% endfor %}
       </div>
     </div>
-    {% endfor %}
-
   </div>
 </div>
+
+<!-- Script to handle scrolling -->
+<script>
+  const cardContainer = document.querySelector(".card-container");
+  const prevBtn = document.querySelector("#prev-btn");
+  const nextBtn = document.querySelector("#next-btn");
+
+  const scrollDistance = 300; // Change this value to adjust scroll distance
+
+  // Handle scrolling to the left
+  prevBtn.addEventListener("click", function() {
+    cardContainer.scrollBy({
+      top: 0,
+      left: -scrollDistance,
+      behavior: "smooth"
+    });
+  });
+
+  // Handle scrolling to the right
+  nextBtn.addEventListener("click", function() {
+    cardContainer.scrollBy({
+      top: 0,
+      left: scrollDistance,
+      behavior: "smooth"
+    });
+  });
+</script>
 
 {% endblock %}

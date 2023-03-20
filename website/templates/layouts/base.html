@@ -22,7 +22,7 @@
 
 <body>
   <!-- Cool weird custom navbar-->
-  <div class="container-fluid navbar-fixed" style="background-color: #171717; height: 70px; position: fixed; top: 0; left: 0; right: 0;">
+  <div class="container-fluid navbar-fixed custom-bg" style="height: 70px; position: fixed; top: 0; left: 0; right: 0;">
     <div class="container">
       <!-- Header on top of the navbar-->
       <div class="row justify-content-center justify-content-between">        
@@ -76,10 +76,32 @@ document.querySelectorAll('.nav-link').forEach(link => {
 });
 </script>
 
+<!-- Space before content  -->
 <div class="invisible container-fluid space-filler"></div>
+<!-- Space before content  -->
 
 {% block content %}
 {% endblock %}
+
+<!-- Space after content -->
+<div class="invisible container-fluid space-filler"></div>
+<!-- Space after content -->
+
+  <footer class="custom-bg text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright:
+    <a class="text-white" href="http://127.0.0.1:3000/">StudentClubs</a>
+  </div>
+  <!-- Copyright -->
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

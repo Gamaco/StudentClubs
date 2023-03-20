@@ -3,10 +3,11 @@ body {
 }
 
 .navbar-fixed {
-    position: fixed !important;
+    /* position: fixed !important; */
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
+    height: 70px !important;
     z-index: 1000 !important;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.63) !important;
   }
@@ -20,7 +21,7 @@ h5 {
 }
 
 .space-filler {
-    height: 80px !important;
+    height: 30px !important;
     margin: 0 !important;
     padding: 0 !important;
     border: none !important;
@@ -98,7 +99,7 @@ h5 {
   max-width: 400px !important;
   margin: 0 auto !important;
 }
-
+ 
 @media (min-width: 768px) {
     .card {
       width: 100% !important;

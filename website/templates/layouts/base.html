@@ -10,14 +10,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <style>
+     @media (max-width: 576px) {
+      .custom-col {
+        flex-basis: 33.33% !important;
+        max-width: 33.33% !important;
+      }
+    }
+
     @media (max-width: 576px) {
-      .col-sm-4 {
-        flex-basis: 33.33%;
-        max-width: 33.33%;
+      .card-text {
+        display: none;
+      }
+
+      .card {
+        height: 80% !important;
       }
     }
   </style>
-  
+
 </head>
 
 <body>
@@ -26,23 +36,23 @@
     <div class="container">
       <!-- Header on top of the navbar-->
       <div class="row justify-content-center justify-content-between">        
-        <div class="col-sm-4 col-md d-flex justify-content-center align-items-center text-wrap" style="height: 25px;">
+        <div class="col-sm-4 col-md d-flex justify-content-center align-items-center text-wrap custom-col" style="height: 25px;">
         <p class="card-text text-center" style="line-height: 5px; color: rgb(188, 188, 188); padding: 0 30px;">
         </p>
       </div>
     </div>
       <div class="row justify-content-center justify-content-between">
-        <div class="col-sm-4 col-md d-flex justify-content-center align-items-center text-wrap" style="height: 40px;">
+        <div class="col-sm-4 col-md d-flex justify-content-center align-items-center text-wrap custom-col" style="height: 40px;">
           <a class="nav-link text-center" href="/discover" style="line-height: 38px; color: rgb(188, 188, 188); padding: 0 5px;">
             <h1></h1><h5><i class="fa fa-tasks icon" aria-hidden="true"></i> Discover</h5>
           </a>
         </div>
-        <div class="col-sm-4 col-md d-flex justify-content-center align-items-center text-wrap" style="height: 40px;">
+        <div class="col-sm-4 col-md d-flex justify-content-center align-items-center text-wrap custom-col" style="height: 40px;">
           <a class="nav-link text-center" href="/" style="line-height: 38px; color: rgb(188, 188, 188); padding: 0 5px;">
             <h1></h1><h5><i class="fa fa-home icon" aria-hidden="true"></i> Join</h5>
           </a>
         </div>
-        <div class="col-sm-4 col-md d-flex justify-content-left align-items-center text-wrap" style="height: 40px;">
+        <div class="col-sm-4 col-md d-flex justify-content-left align-items-center text-wrap custom-col" style="height: 40px;">
           <a class="nav-link text-center" href="/surveys" style="line-height: 38px; color: rgb(188, 188, 188); padding: 0 5px;">
             <h1></h1><h5><i class="fa fa-plus-square-o icon" aria-hidden="true"></i> Events</h5>
           </a>

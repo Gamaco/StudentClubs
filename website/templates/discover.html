@@ -13,10 +13,10 @@
     {% for club in clubs %}
     <div class="col-8 col-sm-4 col-md-4 col-lg-3">
       <div class="card h-100 custom-bg">
-        <img src={{ club.image }} class="card-img-top" alt="...">
+        <img src={{ club.image }} class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
         <div class="card-body">
           <div class="card-header">
-            <h5 class="card-title text-white"> {{ club.name }} </h5>
+            <h7 class="card-title text-white"> {{ club.name }} </h7>
           </div>
           <div class="custom-hr"></div>
           <p class="card-text text-white">{{ club.description }}</p>

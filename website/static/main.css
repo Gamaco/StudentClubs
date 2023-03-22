@@ -1,5 +1,5 @@
 body {
-    background-color: #070707 !important;
+    background-color: #232323 !important;
 }
 
 .navbar-fixed {
@@ -14,6 +14,7 @@ body {
 
 h5 {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px !important;
 }
 
 .icon {
@@ -21,26 +22,22 @@ h5 {
 }
 
 .space-filler {
+    height: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.space-filler.big {
     height: 30px !important;
     margin: 0 !important;
     padding: 0 !important;
     border: none !important;
 }
 
+
 .custom-bg {
     background-color: #171717 !important;
-}
-
-.custom-border {
-    --top-left-radius: 30px;
-    --top-right-radius: 30px;
-    --bottom-left-radius: 15px;
-    --bottom-right-radius: 15px;
-    border-top-left-radius: var(--top-left-radius);
-    border-top-right-radius: var(--top-right-radius);
-    border-bottom-left-radius: var(--bottom-left-radius);
-    border-bottom-right-radius: var(--bottom-right-radius);
-    border: 2px solid #292929 !important;
 }
 
 .custom-textfield-bg {
@@ -63,5 +60,56 @@ h5 {
     width: 100%;
     max-width: 210px;
     background-color: #2E2E2E;
-    margin: 10px 0;
+    margin: 5px 0;
 }
+
+.footer {
+    position: fixed !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    background-color: rgb(17,17,17) !important;
+    color: white !important;
+    text-align: center !important;
+ }
+
+ .cards-carousel-bg {
+    background-color: #232323 !important;
+ }
+
+ .cards-carousel-header {
+    height: 30px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background-color: #232323;
+ }
+
+ .card-text {
+    font-size: 10px !important;
+ }
+
+ .row.custom-padding {
+    padding-bottom: 20px !important;
+ }
+
+ .card.custom-margin {
+    margin-top: 10px !important;
+ }
+
+ .card-category-title {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+ }
+
+ .container-fluid {
+    margin: 0 !important;
+    padding: 0 !important;
+ }
+
+ .container-fluid.spaced {
+    margin-left: 10px !important;
+    margin-top: 10px !important;
+    padding-left: 0 !important;
+ }

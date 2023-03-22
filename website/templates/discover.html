@@ -6,25 +6,28 @@
 
 <!-- Main container -->
 <div style="max-width: 1000px; margin: 0 auto;">
-
   <div class="container-fluid">
-    <div class="row flex-row flex-nowrap overflow-auto">
 
+    <!-- Space before content -->
+<div class="container-fluid space-filler custom-bg"></div>
+
+
+    <div class="container-fluid spaced cards-carousel-header">
+      <p class="text-white card-category-title">Sports</p>
+    </div>
+    <div class="row custom-padding flex-row flex-nowrap overflow-auto cards-carousel-bg">
     {% for club in clubs %}
     <div class="col-8 col-sm-4 col-md-4 col-lg-3">
-      <div class="card h-100 custom-bg">
-        <img src={{ club.image }} class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
+      <div class="card custom-margin h-100 custom-bg" style="border: 2px solid #202020 !important;">
+        <img src={{ club.image }} class="card-img-top" alt="..." style="height: 100px; object-fit: cover;">
         <div class="card-body">
-          <div class="card-header">
-            <h7 class="card-title text-white"> {{ club.name }} </h7>
-          </div>
+            <h7 class="card-title text-white"> {{club.name}} </h7>
           <div class="custom-hr"></div>
           <p class="card-text text-white">{{ club.description }}</p>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item custom-bg text-secondary">School: <p class="text-white">{{ club.school }} </p></li>
           <li class="list-group-item custom-bg text-secondary">Country: <p class="text-white">{{ club.country }} </p></li>
-          <li class="list-group-item custom-bg text-secondary">Category: <p class="text-white">{{ club.category }} </p></li>
         </ul>
         <div class="card-footer">
           <form>
@@ -36,7 +39,46 @@
     {% endfor %}
 
     </div>
+
+<!-- Space after content -->
+<div class="container-fluid space-filler custom-bg"></div>
+
+<!-- Cards Carousel-->
+<div class="container-fluid spaced cards-carousel-header">
+  <p class="text-white card-category-title">Dance</p>
+</div>
+    <div class="row custom-padding flex-row flex-nowrap overflow-auto cards-carousel-bg">
+      {% for club in clubs %}
+      <div class="col-8 col-sm-4 col-md-4 col-lg-3">
+        <div class="card custom-margin h-100 custom-bg">
+          <img src={{ club.image }} class="card-img-top" alt="..." style="height: 100px; object-fit: cover;">
+          <div class="card-body">
+            <div class="card-header">
+              <h7 class="card-title text-white"> {{ club.name }} </h7>
+            </div>
+            <div class="custom-hr"></div>
+            <p class="card-text text-white">{{ club.description }}</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item custom-bg text-secondary">School: <p class="text-white">{{ club.school }} </p></li>
+            <li class="list-group-item custom-bg text-secondary">Country: <p class="text-white">{{ club.country }} </p></li>
+          </ul>
+          <div class="card-footer">
+            <form>
+              <button class="btn">View</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+  
+      </div>
   </div>
 </div>
+
+<!-- Space after content -->
+<div class="invisible container-fluid space-filler big"></div>
+<div class="invisible container-fluid space-filler big"></div>
+<!-- Space after content -->
 
 {% endblock %}

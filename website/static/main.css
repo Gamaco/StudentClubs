@@ -26,6 +26,7 @@ h5 {
     margin: 0 !important;
     padding: 0 !important;
     border: none !important;
+    overflow: overlay; /* set overflow to overlay */
 }
 
 .space-filler.big {
@@ -103,10 +104,16 @@ h5 {
     font-weight: bold;
  }
 
- .container-fluid {
-    margin: 0 !important;
-    padding: 0 !important;
- }
+.container-fluid {
+    /* margin: 0 !important;
+    padding: 0 !important; */
+}
+
+ .invisible {
+    width: 100vw;
+    height: 100vh;
+    overflow: overlay; /* set overflow to overlay */
+  }
 
  .container-fluid.spaced {
     margin-left: 10px !important;

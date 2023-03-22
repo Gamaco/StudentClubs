@@ -105,8 +105,8 @@ h5 {
  }
 
 .container-fluid {
-    /* margin: 0 !important;
-    padding: 0 !important; */
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
  .invisible {
@@ -120,3 +120,12 @@ h5 {
     margin-top: 10px !important;
     padding-left: 0 !important;
  }
+
+ @media (max-width: 576px) {
+    .list-group {
+        display: none !important;
+    }
+    .card {
+      height: 100% !important;
+    }
+  }

@@ -26,7 +26,9 @@ h5 {
 }
 
 .icon {
-    color: #00AACF;
+    background: rgb(220, 220, 220);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .space-filler {
@@ -45,7 +47,11 @@ h5 {
 }
 
 .custom-bg {
-    background-color: #171717 !important;
+    background-color: #202020 !important;
+}
+
+.custom-bg-2 {
+  background: #202020;
 }
 
 .custom-textfield-bg {
@@ -89,6 +95,22 @@ h5 {
  .card-text {
     font-size: 12px !important;
  }
+
+ .navmenu-text {
+  height: 60px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 5px !important;
+  color: rgb(217, 217, 217) !important;
+ }
+
+.navmenu-text i {
+  font-size: 20px !important;
+  margin-bottom: 0px;
+}
 
  .row.custom-padding {
     padding-bottom: 20px !important;
@@ -142,8 +164,7 @@ h5 {
 .footer-dark {
     padding:50px 0;
     color:#f0f9ff;
-    background: rgb(45,45,45);
-    background: linear-gradient(180deg, rgba(45,45,45,1) 0%, rgba(56,60,62,1) 0%, rgba(40,44,48,1) 37%);
+    background: #202020;
   }
   
   .footer-dark h3 {
@@ -228,4 +249,13 @@ h5 {
     opacity:0.3;
     font-size:13px;
     margin-bottom:0;
+  }
+  
+  .fixed-bottom .row [class^="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .navbar-submenu-container {
+    height: 4vh !important;
   }

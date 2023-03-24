@@ -80,7 +80,7 @@ h5 {
 }
 
  .cards-carousel-bg {
-    background-color: #232323 !important;
+    /* background-color: #00ff3c !important; */
  }
 
  .cards-carousel-header {
@@ -88,7 +88,6 @@ h5 {
     margin: 0 !important;
     padding: 0 !important;
     border: none !important;
-    background-color: #232323;
  }
 
  .card-text {

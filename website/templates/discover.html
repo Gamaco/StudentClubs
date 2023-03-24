@@ -8,7 +8,7 @@
 <div style="max-width: 1000px; margin: 0 auto;">
   <div class="container-fluid no-padding">
 
-    <div class="container rounded text-white custom-bg">
+    <div class="container rounded text-white custom-bg ms-1">
       <form>
         <div class="form-group">
           <div class="container-fluid no-padding space-filler"></div>
@@ -35,13 +35,13 @@
   <div class="container-fluid no-padding space-filler space-filler-color"></div>
 
 
-    <div class="container-fluid no-padding spaced clscards-carousel-header">
-      <p class="text-white card-category-title">Social</p>
+    <div class="container-fluid no-padding spaced">
+      <p class="text-white card-category-title">Social<hr></p>
     </div>
     <div class="row custom-height custom-padding flex-row flex-nowrap overflow-auto cards-carousel-bg">
     {% for club in clubs %}
     {% if club.category == 'Social'%}
-    <div class="col-10 col-sm-4 col-md-6 col-lg-5">
+    <div class="col-10 col-sm-4 col-md-6 col-lg-5 ms-4">
       <div class="card custom-height custom-margin custom-bg rounded" style="border: 2px solid #202020 !important;">
         <img src={{ club.image }} class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
         <div class="card-body">
@@ -75,7 +75,7 @@
 <div class="row custom-height custom-padding flex-row flex-nowrap overflow-auto cards-carousel-bg">
 {% for club in clubs %}
 {% if club.category == 'Sports'%}
-<div class="col-10 col-sm-4 col-md-6 col-lg-5">
+<div class="col-10 col-sm-4 col-md-6 col-lg-5 ms-4">
   <div class="card custom-height custom-margin custom-bg rounded" style="border: 2px solid #202020 !important;">
     <img src={{ club.image }} class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
     <div class="card-body">
@@ -109,7 +109,7 @@
 <div class="row custom-height custom-padding flex-row flex-nowrap overflow-auto cards-carousel-bg">
 {% for club in clubs %}
 {% if club.category == 'Academic'%}
-<div class="col-10 col-sm-4 col-md-6 col-lg-5">
+<div class="col-10 col-sm-4 col-md-6 col-lg-5 ms-4">
   <div class="card custom-height custom-margin custom-bg rounded" style="border: 2px solid #202020 !important;">
     <img src={{ club.image }} class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
     <div class="card-body">
@@ -143,7 +143,7 @@
 <div class="row custom-height custom-padding flex-row flex-nowrap overflow-auto cards-carousel-bg">
 {% for club in clubs %}
 {% if club.category == 'Hobbies'%}
-<div class="col-10 col-sm-4 col-md-6 col-lg-5">
+<div class="col-10 col-sm-4 col-md-6 col-lg-5 ms-4">
   <div class="card custom-height custom-margin custom-bg rounded" style="border: 2px solid #202020 !important;">
     <img src={{ club.image }} class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
     <div class="card-body">
@@ -177,7 +177,7 @@
 <div class="row custom-height custom-padding flex-row flex-nowrap overflow-auto cards-carousel-bg">
 {% for club in clubs %}
 {% if club.category == 'Gaming'%}
-<div class="col-10 col-sm-4 col-md-6 col-lg-5">
+<div class="col-10 col-sm-4 col-md-6 col-lg-5 ms-4">
   <div class="card custom-height custom-margin custom-bg rounded" style="border: 2px solid #202020 !important;">
     <img src={{ club.image }} class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
     <div class="card-body">

@@ -39,7 +39,7 @@
     </div>
     <div class="row custom-padding flex-row flex-nowrap overflow-auto cards-carousel-bg">
     {% for club in clubs %}
-    <div class="col-8 col-sm-4 col-md-4 col-lg-3">
+    <div class="col-10 col-sm-4 col-md-6 col-lg-5">
       <div class="card custom-margin h-100 custom-bg rounded" style="border: 2px solid #202020 !important;">
         <img src={{ club.image }} class="card-img-top" alt="..." style="height: 100px; object-fit: cover;">
         <div class="card-body">
@@ -71,7 +71,7 @@
 </div>
     <div class="row custom-padding flex-row flex-nowrap overflow-auto cards-carousel-bg">
       {% for club in clubs %}
-      <div class="col-8 col-sm-4 col-md-4 col-lg-3">
+      <div class="col-10 col-sm-4 col-md-6 col-lg-5">
         <div class="card custom-margin h-100 custom-bg">
           <img src={{ club.image }} class="card-img-top" alt="..." style="height: 100px; object-fit: cover;">
           <div class="card-body">
@@ -87,7 +87,7 @@
           </ul>
           <div class="card-footer">
             <form>
-              <button class="btn">View</button>
+              <button class="btn btn-outline-secondary">View</button>
             </form>
           </div>
         </div>

@@ -8,7 +8,7 @@
 <div style="max-width: 1000px; margin: 0 auto;">
   <div class="container-fluid no-padding">
 
-    <div class="container rounded text-white custom-bg ms-1">
+    <div class="container rounded text-white custom-bg-2 ms-auto">
       <form>
         <div class="form-group">
           <div class="container-fluid no-padding space-filler"></div>
@@ -24,7 +24,7 @@
           <input type="text" class="form-control" id="pwd" placeholder="Town" name="pwd">
         </div>
         <div class="container-fluid no-padding space-filler"></div>
-        <button type="button" class="btn btn-outline-secondary">Update</button>
+        <button type="button" class="btn btn-outline-secondary">Update Search</button>
         <div class="container-fluid no-padding space-filler"></div>
       </form>
     </div>
@@ -47,22 +47,21 @@
         <div class="card-body">
             <h7 class="card-title text-white"> {{club.name}} </h7>
           <div class="custom-hr"></div>
+          <div class="card-footer">
+            <form>
+              <button class="btn btn-outline-secondary">View</button>
+            </form>
+          </div>
           <p class="card-text text-white">{{ club.description }}</p>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item custom-bg text-secondary">School: <p class="text-white">{{ club.school }} </p></li>
           <li class="list-group-item custom-bg text-secondary">Country: <p class="text-white">{{ club.country }} </p></li>
         </ul>
-        <div class="card-footer">
-          <form>
-            <button class="btn btn-outline-secondary">View</button>
-          </form>
-        </div>
       </div>
     </div>
     {% endif %}
     {% endfor %}
-
     </div>
 
 <!-- Space after content -->

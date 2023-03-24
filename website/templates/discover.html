@@ -6,13 +6,13 @@
 
 <!-- Main container -->
 <div style="max-width: 1000px; margin: 0 auto;">
-  <div class="container-fluid">
+  <div class="container-fluid no-padding">
 
-    <div class="container text-white custom-bg">
+    <div class="container rounded text-white custom-bg">
       <form>
-        <h6>School Information</h6>
         <div class="form-group">
-          <label for="email"></label>
+          <div class="container-fluid no-padding space-filler"></div>
+          <h6>School Information</h6>
           <input type="text" class="form-control" id="email" placeholder="School" name="email">
         </div>
         <div class="form-group">
@@ -23,24 +23,24 @@
           <label for="pwd"></label>
           <input type="text" class="form-control" id="pwd" placeholder="Town" name="pwd">
         </div>
-        <div class="container-fluid space-filler"></div>
-        <button type="submit" class="btn btn-default">Update</button>
-        <div class="container-fluid space-filler"></div>
+        <div class="container-fluid no-padding space-filler"></div>
+        <button type="button" class="btn btn-outline-secondary">Update</button>
+        <div class="container-fluid no-padding space-filler"></div>
       </form>
     </div>
 
     <!-- Space before content -->
-  <div class="container-fluid space-filler"></div>
-  <div class="container-fluid space-filler space-filler-color"></div>
+  <div class="container-fluid no-padding space-filler"></div>
+  <div class="container-fluid no-padding space-filler space-filler-color"></div>
 
 
-    <div class="container-fluid spaced cards-carousel-header">
+    <div class="container-fluid no-padding spaced clscards-carousel-header">
       <p class="text-white card-category-title">Sports</p>
     </div>
     <div class="row custom-padding flex-row flex-nowrap overflow-auto cards-carousel-bg">
     {% for club in clubs %}
     <div class="col-8 col-sm-4 col-md-4 col-lg-3">
-      <div class="card custom-margin h-100 custom-bg" style="border: 2px solid #202020 !important;">
+      <div class="card custom-margin h-100 custom-bg rounded" style="border: 2px solid #202020 !important;">
         <img src={{ club.image }} class="card-img-top" alt="..." style="height: 100px; object-fit: cover;">
         <div class="card-body">
             <h7 class="card-title text-white"> {{club.name}} </h7>
@@ -53,7 +53,7 @@
         </ul>
         <div class="card-footer">
           <form>
-            <button class="btn">View</button>
+            <button class="btn btn-outline-secondary">View</button>
           </form>
         </div>
       </div>
@@ -66,7 +66,7 @@
 <div class="container-fluid space-filler space-filler-color"></div>
 
 <!-- Cards Carousel-->
-<div class="container-fluid spaced cards-carousel-header">
+<div class="container-fluid no-padding spaced cards-carousel-header">
   <p class="text-white card-category-title">Dance</p>
 </div>
     <div class="row custom-padding flex-row flex-nowrap overflow-auto cards-carousel-bg">

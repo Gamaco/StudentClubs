@@ -10,3 +10,6 @@ def discover(request):
     return render(request, 'discover.html', {
         'clubs' : objects
     })
+
+def joined(request):
+    return render(request, 'joined.html')

@@ -12,7 +12,6 @@
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <button class="nav-link active" id="nav-clubs-tab" data-bs-toggle="tab" data-bs-target="#nav-clubs" type="button" role="tab" aria-controls="nav-clubs" aria-selected="true">Clubs</button>
             <button class="nav-link" id="nav-events-tab" data-bs-toggle="tab" data-bs-target="#nav-events" type="button" role="tab" aria-controls="nav-events" aria-selected="false">Events</button>
-            <button class="nav-link" id="nav-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Disabled</button>
         </div>
 
           <div class="tab-content" id="nav-tabContent">
@@ -23,37 +22,29 @@
                 <!-- Space before content -->
                 <div class="container-fluid no-padding space-filler"></div><br>
 
-
-                <div class="card-wrapper">
-                  <div class="card custom-bg">
-                    <div class="row g-0">
-                      <div class="col-10 col-sm-1 col-md-3 col-lg-4">
-                        <img src="https://www.signupgenius.com/cms/images/groups/iStock_000021214814_600x400.jpg" class="img-fluid rounded-start" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body text-white">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                {% for club in Clubs %}
+                    <div class="card-wrapper">
+                      <div class="card custom-bg" style="width: 100%">
+                        <div class="row g-0">
+                          <div class="col-10 col-sm-1 col-md-3 col-lg-4">
+                            <img src={{ club.image }} class="img-fluid rounded-start" alt="..." style="height: 70px; width: 120px;">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body text-white">
+                              <h5 class="card-title">{{ club.name  }}</h5>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-
+                {% endfor %}
+            
+            
 
             </div>
 
             <div class="tab-pane fade" id="nav-events" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">...</div>
           </div>
-    </div>
-    <div class="card-body">
-                
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Create New Club</a>
-      
     </div>
   </div>
 

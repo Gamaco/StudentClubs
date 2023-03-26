@@ -51,7 +51,7 @@ h5 {
 }
 
 .custom-bg-2 {
-  background: #202020;
+  background: #363636a8 !important;
 }
 
 .custom-textfield-bg {
@@ -263,4 +263,29 @@ h5 {
 
   .navbar-submenu-container {
     height: 4vh !important;
+  }
+
+  
+  .joined-card {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .joined-card-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover !important;
+    border-radius: 0;
+  }
+
+  .card-wrapper {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+  }
+
+  .card-body {
+    flex-grow: 1;
   }

@@ -31,6 +31,14 @@ h5 {
     -webkit-text-fill-color: transparent;
 }
 
+.space-filler.small {
+  height: 0px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  overflow: overlay; /* set overflow to overlay */
+}
+
 .space-filler {
     height: 10px !important;
     margin: 0 !important;
@@ -265,27 +273,24 @@ h5 {
     height: 4vh !important;
   }
 
-  
-  .joined-card {
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .joined-card-image {
-    height: 100%;
-    width: 100%;
-    object-fit: cover !important;
-    border-radius: 0;
-  }
-
   .card-wrapper {
     display: flex;
-    align-items: stretch;
+    flex-direction: column;
+  }
+  
+  .card-body {
     height: 100%;
   }
 
-  .card-body {
-    flex-grow: 1;
+  .card-wrapper .card .row .col-3 {
+    height: 80px !important; /* custom height value */
+  }
+  
+  .card-wrapper .card .row .col-3 img {
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-body-left {
+    text-align: left;
   }

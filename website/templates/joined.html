@@ -23,20 +23,23 @@
                 <div class="container-fluid no-padding space-filler"></div><br>
 
                 {% for club in Clubs %}
-                    <div class="card-wrapper">
-                      <div class="card custom-bg" style="width: 100%">
-                        <div class="row g-0">
-                          <div class="col-10 col-sm-1 col-md-3 col-lg-4">
-                            <img src={{ club.image }} class="img-fluid rounded-start" alt="..." style="height: 70px; width: 120px;">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body text-white">
-                              <h5 class="card-title">{{ club.name  }}</h5>
-                            </div>
-                          </div>
+                <div class="card-wrapper">
+                  <div class="card custom-bg">
+                    <div class="row g-0">
+                      <div class="col-3">
+                        <img src={{ club.image }} class="img-fluid rounded-start h-100 w-100" alt="..." style="object-fit: cover; min-height: 100%;">
+                      </div>
+                      <div class="col-9">
+                        <div class="card-body card-body-left text-white h-100">
+                          <h6 class="card-title">{{ club.name  }}</h6>
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+                 
+                <!-- Space  -->
+                <div class="invisible container-fluid space-filler custom-bg"></div>
                 {% endfor %}
             
             

@@ -17,3 +17,6 @@ def joined(request):
     return render(request, 'joined.html', {
         'Clubs' : clubs
     })
+
+def clubinformation(request):
+    return render(request, 'clubinformation.html')

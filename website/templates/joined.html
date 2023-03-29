@@ -24,7 +24,7 @@
 
                 {% for club in Clubs %}
                 <div class="card-wrapper">
-                  <div class="card custom-bg">
+                  <div class="card custom-bg" data-card-id="{{ club.id }}">
                     <div class="row g-0">
                       <div class="col-3">
                         <img src={{ club.image }} class="img-fluid rounded-start h-100 w-100" alt="..." style="object-fit: cover; min-height: 100%;">
@@ -52,4 +52,20 @@
   </div>
 
 </div>
+
+<script>
+document.querySelectorAll('[data-card-id]').forEach(card => {
+  const cardId = card.dataset.cardId;
+
+  card.addEventListener('click', function() {
+    // Get the URL of the destination page for this card
+    // const destinationUrl = `http://www.example.com/cards/${cardId}`;
+
+    const destinationUrl = `../discover/`;
+
+    // Navigate to the new page
+    window.location.href = destinationUrl;
+  });
+});
+</script>
 {% endblock %}

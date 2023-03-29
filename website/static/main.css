@@ -294,3 +294,25 @@ h5 {
   .card-body-left {
     text-align: left;
   }
+
+  .nav-tabs .nav-link {
+    background-color: #484848 !important;
+    color: #d2d1d1 !important;
+  }
+
+  .nav-tabs .nav-link:hover {
+    border-color: #4a4a4a !important;
+    background-color: #535353 !important;
+  }
+  
+  .nav-tabs .nav-link.active {
+    background-color: rgb(136, 136, 136) !important;
+    color: white !important;
+    border-color: #4a4a4a !important;
+  }
+
+  .card-wrapper .card:hover {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+  }
+  

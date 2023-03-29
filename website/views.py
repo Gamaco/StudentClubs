@@ -10,3 +10,10 @@ def discover(request):
     return render(request, 'discover.html', {
         'clubs' : objects
     })
+
+def joined(request):
+    user_id = 1
+    clubs = Club.objects.filter(users_id__contains=[user_id])
+    return render(request, 'joined.html', {
+        'Clubs' : clubs
+    })

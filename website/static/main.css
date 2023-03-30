@@ -315,4 +315,43 @@ h5 {
     -webkit-filter: brightness(80%);
     filter: brightness(80%);
   }
+
+  .club-avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* On Mobile and Tablets */
+  @media (max-width:768px) {
+    .club-avatar {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .club-avatar-label {
+    font-size: clamp(1.25rem, 3cqw, 1.75rem);
+  }
+
+  .club-action-button {
+    height: 35px!important;
+  }
+
+  .club-news-container {
+    max-height: 400px;
+    border-radius: 10%;
+  }
+
+  .club-news-container .card-body {
+    max-height: 400px;
+  }
+
+  .club-news-container .card-body::-webkit-scrollbar{
+    background: none;
+  }
+
+  .club-news-container .card-body::-webkit-scrollbar-thumb{
+    background: lightblue;
+  }
+  
   

@@ -90,7 +90,7 @@ h5 {
 }
 
 .row.custom-height {
-    height: 600px !important;
+    height: 610px !important;
 }
 
  .cards-carousel-header {
@@ -314,5 +314,38 @@ h5 {
   .card-wrapper .card:hover {
     -webkit-filter: brightness(80%);
     filter: brightness(80%);
+  }
+
+  .card-row {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+  .card-col {
+    flex: 0 0 auto;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .card {
+    margin-bottom: 1px;
+  }
+
+  .custom-height .card-img-top {
+    min-height: 300px;
+    max-height: 300px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-category-title, .social-count {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .social-count {
+    font-size: medium;
   }
   

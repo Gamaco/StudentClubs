@@ -382,7 +382,7 @@ h5 {
   }
 
   .club-socials-container {
-    height: 250px;
+    height: 200px;
     touch-action: pan-x;
     color: rgb(0, 0, 0, 0);
     -webkit-text-fill-color: white;

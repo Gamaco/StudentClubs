@@ -27,3 +27,6 @@ def joined(request):
     return render(request, 'joined.html', {
         'Clubs' : clubs
     })
+
+def club_creation(request):
+    return render(request, 'club-creation.html')

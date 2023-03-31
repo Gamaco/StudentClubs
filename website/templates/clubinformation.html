@@ -23,17 +23,18 @@
     <!-- Club content container -->
     <div class="p-2" style="max-width: 1000px; margin: 0 auto;">
         <!-- Club's information - description -->
-        <div>
+        <div class="club-description-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse numquam tempore reprehenderit laudantium enim, harum quod minima vel voluptate sunt repudiandae iure pariatur! Laboriosam qui impedit atque, tempore velit quo iusto assumenda, blanditiis recusandae porro hic voluptate dolorem accusantium laudantium totam fuga modi incidunt quasi nisi quibusdam voluptatibus aliquam error vel. Perspiciatis recusandae ea tempore doloribus eius, beatae voluptas autem iste corrupti dolore id asperiores minus accusamus alias vel sed praesentium. Labore iste quas, sint praesentium porro quidem? Optio, eius modi labore exercitationem qui accusamus enim nobis, similique accusantium soluta repellat velit! Tenetur mollitia quod asperiores possimus dolore tempora illo.
             <hr class="bg-secondary border-5 border-top border-secondary opacity-25">
         </div>
 
         <div class="row">
+            <!-- Club actions and news -->
             <div class="col-5">
                 <!-- Club actions -->
                 <div class="d-grid gap-2 pb-5">
                     <!-- Join Club button -->
-                    <button type="button" class="btn btn-info btn-lg mx-3 border-0"><b>Join this club</b></button>
+                    <a href="#" role="button" class="btn btn-info btn-lg mx-3 border-0"><b>Join this club</b></a>
 
                     <!-- Club files button -->
                     <a href="#" role="button" class="position-relative btn btn-dark btn-lg mx-4 club-action-button">
@@ -71,9 +72,9 @@
 
                 <!-- Club news -->
                 <div class="card club-news-container w-100 bg-dark">
-                    <div class="card-header border-0 pb-0">
-                        <h3 class="m-0"><b>News</b></h3>
-                        <hr class="bg-secondary border-5 border-top border-secondary opacity-25">
+                    <div class="card-header border-0 pb-0 pt-3" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;">
+                        <h3 class="m-0 club-page-card-title"><b>News</b></h3>
+                        <hr class="bg-secondary border-5 border-top border-secondary opacity-25 mt-1">
                     </div>
                     
                     <div class="card-body pt-0" style="overflow-y: auto;">
@@ -127,63 +128,104 @@
                     
                 </div>
             </div>
+            <!-- Club competitions and socials -->
             <div class="col-7">
-                <!-- Club news -->
-                <div class="card club-news-container w-100 bg-dark">
-                    <div class="card-header border-0 pb-0">
-                        <h3 class="m-0"><b>Current Competitions</b></h3>
-                        <hr class="bg-secondary border-5 border-top border-secondary opacity-25">
+                <!-- Club competitions -->
+                <div class="card club-news-container w-100 bg-dark mb-5">
+                    <div class="card-header border-0 pb-0 pt-3" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;">
+                        <div class="row">
+                            <div class="col-9">
+                                <h3 class="m-0 club-page-card-title"><b>Current Competitions</b></h3>
+                                <hr class="bg-secondary border-5 border-top border-secondary opacity-25 mt-1" style="height: 0px;">
+                            </div>
+                            <div class="col-3 px-0">
+                                <a href="#" role="button" class="btn btn-info btn-sm border-0 w-75 mx-auto d-flex justify-content-center align-items-center">
+                                    <b>Create</b>
+                                </a>
+                            </div>
+                        </div>
+                        
                     </div>
                     
                     <div class="card-body pt-0" style="overflow-y: auto;">
 
-                        <!-- New -->
-                        <div class="p-2" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
-                            <div class="card-title">News title</div>
-                            <p class="card-text">
-                                want to go other countries live the life
-                            </p>
+                        <!-- New Competition -->
+                        <div class="row m-2 club-page-card-new-competition justify-content-center align-items-center" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
+                            <div class="col-lg-2 col-md-12">
+                                <avatar class="club-avatar bg-primary rounded-circle d-block float-none mx-auto"></avatar>
+                            </div>
+                            <div class="col-lg-10 col-md-12">
+                                <p class="text-center text-wrap club-avatar-label m-0 club-name" ><b>Reading  LKJA  ASDLKJA SDLKJb</b></p>
+                            </div>
                             <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto">
                         </div>
 
-                        <!-- New -->
-                        <div class="p-2" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
-                            <div class="card-title">News title</div>
-                            <p class="card-text">
-                                nah you cant because youre poor
-                            </p>
+                        <!-- New Competition -->
+                        <div class="row m-2 club-page-card-new-competition justify-content-center align-items-center" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
+                            <div class="col-lg-2 col-md-12">
+                                <avatar class="club-avatar bg-primary rounded-circle d-block float-none mx-auto"></avatar>
+                            </div>
+                            <div class="col-lg-10 col-md-12">
+                                <p class="text-center text-wrap club-avatar-label m-0 club-name" ><b>Reading  LKJA  ASDLKJA SDLKJb</b></p>
+                            </div>
                             <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto">
                         </div>
                         
-                        <!-- New -->
-                        <div class="p-2" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
-                            <div class="card-title">News title</div>
-                            <p class="card-text">
-                                fuck money
-                            </p>
+                        <!-- New Competition -->
+                        <div class="row m-2 club-page-card-new-competition justify-content-center align-items-center" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
+                            <div class="col-lg-2 col-md-12">
+                                <avatar class="club-avatar bg-primary rounded-circle d-block float-none mx-auto"></avatar>
+                            </div>
+                            <div class="col-lg-10 col-md-12">
+                                <p class="text-center text-wrap club-avatar-label m-0 club-name" ><b>Reading  LKJA  ASDLKJA SDLKJb</b></p>
+                            </div>
                             <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto">
                         </div>
                         
-                        <!-- New -->
-                        <div class="p-2" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
-                            <div class="card-title">News title</div>
-                            <p class="card-text">
-                                fuck money
-                            </p>
-                            <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto">
-                        </div>
-
-                        <!-- New -->
-                        <div class="p-2" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
-                            <div class="card-title">News title</div>
-                            <p class="card-text">
-                                fuck money
-                            </p>
+                        <!-- New Competition -->
+                        <div class="row m-2 club-page-card-new-competition justify-content-center align-items-center" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
+                            <div class="col-lg-2 col-md-12">
+                                <avatar class="club-avatar bg-primary rounded-circle d-block float-none mx-auto"></avatar>
+                            </div>
+                            <div class="col-lg-10 col-md-12">
+                                <p class="text-center text-wrap club-avatar-label m-0 club-name" ><b>Reading  LKJA  ASDLKJA SDLKJb</b></p>
+                            </div>
                             <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto">
                         </div>
 
                     </div>
                     
+                </div>
+
+                <!-- Socials -->
+                <div class="position-relative club-socials-container row flex-row flex-nowrap gap-0 justify-content-left align-items-center" style="overflow-x: auto; --circle-size: 8cqw;">
+                    <div class="position-absolute top-0 start-0 club-page-card-title">
+                        <b>Socials</b>
+                    </div>
+                    <div class="col-auto">
+                        <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+                    </div>
+                    <div class="col-auto">
+                        <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+                    </div>
+                    <div class="col-auto">
+                        <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+                    </div>
+                    <div class="col-auto">
+                        <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+                    </div>
+                    <div class="col-auto">
+                        <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+                    </div>
+                    <div class="col-auto">
+                        <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+                    </div>
+                    <div class="col-auto">
+                        <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+                    </div>
+                    <div class="col-auto">
+                        <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+                    </div>
                 </div>
             </div>
         </div>

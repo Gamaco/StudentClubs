@@ -333,6 +333,10 @@ h5 {
     font-size: clamp(1.25rem, 3cqw, 1.75rem);
   }
 
+  .club-description-text {
+    font-size: clamp(0.75rem, 1.1cqw, 1.75rem);
+  }
+
   .club-action-button {
     height: 35px!important;
   }
@@ -344,14 +348,65 @@ h5 {
 
   .club-news-container .card-body {
     max-height: 400px;
+    color: rgb(0, 0, 0, 0);
+    -webkit-text-fill-color: white;
+    transition: color 0.5s;
+  }
+
+  .club-news-container .card-body:hover {
+    color: lightblue;
   }
 
   .club-news-container .card-body::-webkit-scrollbar{
-    background: none;
+    border-radius: 10px;
+    width: 5px;
+    background-clip: padding-box;
   }
 
   .club-news-container .card-body::-webkit-scrollbar-thumb{
-    background: lightblue;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 5px;
   }
   
+  .club-page-card-title {
+    font-size: clamp(1rem, 1.5cqw, 1.75rem);
+  }
+
+  .club-page-card-new-competition .club-avatar {
+    width: clamp(40px, 8cqw, 80px);
+    height: clamp(40px, 8cqw, 80px);
+  }
+
+  .club-page-card-new-competition .club-name {
+    font-size: clamp(0.75rem, 1.1cqw, 1.75rem);
+  }
+
+  .club-socials-container {
+    height: 250px;
+    touch-action: pan-x;
+    color: rgb(0, 0, 0, 0);
+    -webkit-text-fill-color: white;
+    transition: color 0.5s;
+  }
+
+  .club-socials-container:hover{
+    color: lightblue;
+  }
+
+  .club-socials-container::-webkit-scrollbar{
+    border-radius: 10px;
+    height: 5px;
+    background-clip: padding-box;
+  }
+
+  .club-socials-container::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 5px;
+  }
+
+  .club-social-circle {
+    display: inline-block;
+    width: clamp(40px, var(--circle-size), 80px);
+    height: clamp(40px, var(--circle-size), 80px);
+  }
   

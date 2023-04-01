@@ -29,4 +29,33 @@ def joined(request):
     user_id = 1
     clubs = Club.objects.filter(users_id__contains=[user_id])
     return render(request, 'joined.html', {
+        'Clubs' : clubs
+    })
 
+def clubinformation(request):
+    return render(request, 'clubinformation.html')
+
+def club_creation(request):
+    if request.method == 'POST':
+        data = request.POST
+        club_name = data.get("club_name")
+        club_category = data.get("category")
+        club_description = data.get("description")
+        school_name = data.get("school_name")
+        club_country = data.get("country")
+
+        # Get the uploaded image file
+        image_file = request.FILES.get('image')
+
+        # Create a new Club instance
+        new_club = Club.objects.create(
+        name=club_name,
+        category=club_category,
+        description=club_description,
+        school=school_name,
+        country=club_country,
+        image=image_file  # Set the image field to the uploaded file path.
+        )
+        return render(request, 'joined.html')
+    else:
+        return render(request, 'club-creation.html')

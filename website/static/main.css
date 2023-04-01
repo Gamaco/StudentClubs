@@ -27,8 +27,13 @@ h5 {
 
 .icon {
     background: rgb(220, 220, 220);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.btn-info {
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.63) !important;
 }
 
 .space-filler.small {
@@ -333,9 +338,10 @@ h5 {
   }
   
   .nav-tabs .nav-link.active {
-    background-color: rgb(136, 136, 136) !important;
+    background-color: rgb(57, 212, 255) !important;
     color: white !important;
     border-color: #4a4a4a !important;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.63) !important;
   }
 
   .card-wrapper .card:hover {
@@ -343,5 +349,199 @@ h5 {
     filter: brightness(80%);
   }
 
+  .club-avatar {
+    width: clamp(80px, 10cqw, 120px);
+    height: clamp(80px, 10cqw, 120px);
+  }
 
+  .club-avatar-label {
+    font-size: clamp(1.25rem, 3cqw, 1.75rem);
+  }
+
+  .club-description-text {
+    font-size: clamp(0.75rem, 1.1cqw, 1rem);
+  }
+
+  .club-action-button {
+    height: 35px!important;
+    background-color: rgba(34, 38, 42, 0.25)!important;
+  }
+
+  .club-action-button:hover{
+    background-color: #212529!important;
+  }
+
+  .club-news-container {
+    max-height: 400px;
+    border-radius: 10%;
+    border-radius: 1rem!important;
+  }
+
+  .club-news-container .card-body {
+    max-height: 400px;
+    color: rgb(0, 0, 0, 0);
+    -webkit-text-fill-color: white;
+    transition: color 0.5s;
+  }
+
+  .club-news-container .card-body:hover {
+    color: lightblue;
+  }
+
+  .club-news-container .card-body::-webkit-scrollbar{
+    border-radius: 10px;
+    width: 5px;
+    background-clip: padding-box;
+  }
+
+  .club-news-container .card-body::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 5px;
+  }
+
+  .club-news-card-title {
+    margin-bottom: 0.5rem;
+    font-size: clamp(1rem, 1.5cqw, 1.25rem);
+  }
+
+  .club-news-card-body-text {
+    -webkit-text-fill-color: rgb(255, 255, 255, 0.65);
+    font-size: clamp(0.75rem, 1cqw, 1rem);
+  }
+  
+  .club-page-card-title {
+    font-size: clamp(1rem, 1.5cqw, 1.5rem);
+  }
+
+  .club-new-competition-avatar {
+    width: clamp(50px, 8cqw, 80px);
+    height: clamp(50px, 8cqw, 80px);
+  }
+
+  .club-page-card-new-competition .club-name {
+    font-size: clamp(0.75rem, 1.1cqw, 1rem);
+  }
+
+  .club-socials-container {
+    height: 232px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 1rem!important;
+  }
+
+  .club-socials-container .club-social-list{
+    touch-action: pan-x;
+    color: rgb(0, 0, 0, 0);
+    -webkit-text-fill-color: white;
+    transition: color 0.5s;
+  }
+
+  .club-socials-container:hover .club-social-list{
+    color: lightblue;
+  }
+
+  .club-socials-container .club-social-list::-webkit-scrollbar{
+    border-radius: 10px;
+    height: 5px;
+    background-clip: padding-box;
+  }
+
+  .club-socials-container .club-social-list::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 5px;
+  }
+
+  .club-social-circle {
+    display: block;
+    width: clamp(50px, var(--circle-size), 80px);
+    height: clamp(50px, var(--circle-size), 80px);
+  }
+
+  .club-admins-container {
+    max-height: 400px;
+    overflow-y: auto;
+    touch-action: pan-y;
+    color: rgb(0, 0, 0, 0);
+    -webkit-text-fill-color: white;
+    transition: color 0.5s;
+  }
+  
+  .club-admins-container:hover{
+    color: lightblue;
+  }
+
+  .club-admins-container::-webkit-scrollbar{
+    border-radius: 10px;
+    width: 5px;
+    background-clip: padding-box;
+  }
+
+  .club-admins-container::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 5px;
+  }
+
+  .club-admin-avatar {
+    width: clamp(50px, 8cqw, 80px);
+    height: clamp(50px, 8cqw, 80px);
+  }
+
+  .card-row {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+  .card-col {
+    flex: 0 0 auto;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .card {
+    margin-bottom: 1px;
+  }
+
+  .custom-height .card-img-top {
+    min-height: 300px;
+    max-height: 300px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-category-title, .social-count {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .social-count {
+    font-size: medium;
+  }
+
+  button.btn.button {
+    border-radius: 100rem;
+    padding: 1rem;
+    font-family: 'Avenir Next';
+    font-size: 1rem;
+    padding: .5rem 3rem;
+    color: black;
+    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(110deg, #ffffff, #ffffff, #ffffff);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #202020 inset;
+  }
+  
+  button.btn.button:hover {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(110deg, #777777, #777777, #777777);
+    box-shadow: none;
+    color: white;
+  }
+
+  .charCount {
+    color: rgb(164, 253, 164);
+    font-size: 13px;
+    font-weight: bold;
+  }
   

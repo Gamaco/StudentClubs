@@ -70,9 +70,9 @@ WSGI_APPLICATION = 'studentClubs.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'studentclubs',
+        'NAME': 'studentclubsdb',
         'USER' : 'gaby',
-        'PASSWORD' : '123456'
+        'PASSWORD' : '@Algoritm0'
     }
 }
 

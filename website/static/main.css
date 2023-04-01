@@ -4,18 +4,16 @@ body {
 }
 
 .navbar-fixed {
-    /* position: fixed !important; */
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    /* height: 70px !important; */
-    z-index: 1000 !important;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.63) !important;
-    max-height: 50px;
-    background: rgb(61,53,53);
-    background: linear-gradient(90deg, rgba(61,53,53,1) 2%, rgba(41,48,52,1) 15%, rgba(56,60,62,1) 23%, rgba(48,40,40,1) 52%, rgba(37,37,37,1) 73%, rgba(56,60,62,1) 89%, rgba(61,53,53,1) 97%);
-
-  }
+  /* position: fixed !important; */
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  /* height: 70px !important; */
+  z-index: 1000 !important;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.63) !important;
+  background: rgb(61,53,53);
+  background: linear-gradient(90deg, rgba(61,53,53,1) 2%, rgba(41,48,52,1) 15%, rgba(56,60,62,1) 23%, rgba(48,40,40,1) 52%, rgba(37,37,37,1) 73%, rgba(56,60,62,1) 89%, rgba(61,53,53,1) 97%);
+}
 
   .hidden-menu {
     background: rgb(61,53,53);

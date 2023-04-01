@@ -372,6 +372,7 @@ h5 {
   }
 
   .club-news-card-body-text {
+    -webkit-text-fill-color: rgb(255, 255, 255, 0.65);
     font-size: clamp(0.75rem, 1cqw, 1rem);
   }
   

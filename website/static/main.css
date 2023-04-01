@@ -1,19 +1,19 @@
 body {
-    background: rgb(61,53,53);
-    background: linear-gradient(90deg, rgba(61,53,53,1) 2%, rgba(41,48,52,1) 15%, rgba(56,60,62,1) 23%, rgba(48,40,40,1) 52%, rgba(37,37,37,1) 73%, rgba(56,60,62,1) 89%, rgba(61,53,53,1) 97%);
+  background: rgb(61,53,53);
+  background: linear-gradient(90deg, rgba(61,53,53,1) 2%, rgba(41,48,52,1) 15%, rgba(56,60,62,1) 23%, rgba(48,40,40,1) 52%, rgba(37,37,37,1) 73%, rgba(56,60,62,1) 89%, rgba(61,53,53,1) 97%);
 }
 
 .navbar-fixed {
-    /* position: fixed !important; */
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    /* height: 70px !important; */
-    z-index: 1000 !important;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.63) !important;
-    background: rgb(61,53,53);
-    background: linear-gradient(90deg, rgba(61,53,53,1) 2%, rgba(41,48,52,1) 15%, rgba(56,60,62,1) 23%, rgba(48,40,40,1) 52%, rgba(37,37,37,1) 73%, rgba(56,60,62,1) 89%, rgba(61,53,53,1) 97%);
-  }
+  /* position: fixed !important; */
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  /* height: 70px !important; */
+  z-index: 1000 !important;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.63) !important;
+  background: rgb(61,53,53);
+  background: linear-gradient(90deg, rgba(61,53,53,1) 2%, rgba(41,48,52,1) 15%, rgba(56,60,62,1) 23%, rgba(48,40,40,1) 52%, rgba(37,37,37,1) 73%, rgba(56,60,62,1) 89%, rgba(61,53,53,1) 97%);
+}
 
   .hidden-menu {
     background: rgb(61,53,53);
@@ -55,11 +55,15 @@ h5 {
 }
 
 .custom-bg {
-    background-color: #202020 !important;
+  background-color: #202020 !important;
 }
 
 .custom-bg-2 {
   background: #232323a8 !important;
+}
+
+.inputs-bg {
+  background: #2a2a2a !important;
 }
 
 .custom-textfield-bg {
@@ -77,6 +81,11 @@ h5 {
     line-height: .5 !important;
 }
 
+.btn.form-submission {
+  border-radius: 5px !important;
+  height: 60px !important;
+  width: 100px !important
+}
 .custom-hr {
     height: 5px;
     width: 100%;
@@ -90,7 +99,7 @@ h5 {
 }
 
 .row.custom-height {
-    height: 600px !important;
+    height: 610px !important;
 }
 
  .cards-carousel-header {
@@ -117,7 +126,7 @@ h5 {
 
  .navmenu-text.active {
   color: #ffffff !important;
-  box-shadow: 0px 10px 5px -5px rgba(86, 86, 86, 0.361) !important;
+  box-shadow: 0px 10px 5px -5px rgba(86, 86, 86, 0.89) !important;
  }
 
 .navmenu-text i {
@@ -142,6 +151,11 @@ h5 {
 .container-fluid.no-padding {
     margin: 0 !important;
     padding: 0 !important;
+}
+
+.no-spaces {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
  .invisible {
@@ -237,6 +251,19 @@ h5 {
       margin-top:20px;
     }
   }
+
+  @media only screen and (min-width: 991px) {
+    .card-col.col-10.col-sm-4.col-md-7.col-lg-5 {
+      margin-left: 2rem; /* for example */
+    }
+  }
+
+  @media only screen and (min-width: 480px) {
+    .my-element {
+      /* styles for screens larger than a phone */
+      grid-column: 1 / span 3; /* for example */
+    }
+  }
   
   .footer-dark .item.social > a {
     font-size:20px;
@@ -316,139 +343,5 @@ h5 {
     filter: brightness(80%);
   }
 
-  .club-avatar {
-    width: clamp(80px, 10cqw, 120px);
-    height: clamp(80px, 10cqw, 120px);
-  }
 
-  .club-avatar-label {
-    font-size: clamp(1.25rem, 3cqw, 1.75rem);
-  }
-
-  .club-description-text {
-    font-size: clamp(0.75rem, 1.1cqw, 1rem);
-  }
-
-  .club-action-button {
-    height: 35px!important;
-    background-color: rgba(34, 38, 42, 0.25)!important;
-  }
-
-  .club-action-button:hover{
-    background-color: #212529!important;
-  }
-
-  .club-news-container {
-    max-height: 400px;
-    border-radius: 10%;
-    border-radius: 1rem!important;
-  }
-
-  .club-news-container .card-body {
-    max-height: 400px;
-    color: rgb(0, 0, 0, 0);
-    -webkit-text-fill-color: white;
-    transition: color 0.5s;
-  }
-
-  .club-news-container .card-body:hover {
-    color: lightblue;
-  }
-
-  .club-news-container .card-body::-webkit-scrollbar{
-    border-radius: 10px;
-    width: 5px;
-    background-clip: padding-box;
-  }
-
-  .club-news-container .card-body::-webkit-scrollbar-thumb{
-    border-radius: 10px;
-    box-shadow: inset 0 0 0 5px;
-  }
-
-  .club-news-card-title {
-    margin-bottom: 0.5rem;
-    font-size: clamp(1rem, 1.5cqw, 1.25rem);
-  }
-
-  .club-news-card-body-text {
-    -webkit-text-fill-color: rgb(255, 255, 255, 0.65);
-    font-size: clamp(0.75rem, 1cqw, 1rem);
-  }
-  
-  .club-page-card-title {
-    font-size: clamp(1rem, 1.5cqw, 1.5rem);
-  }
-
-  .club-new-competition-avatar {
-    width: clamp(50px, 8cqw, 80px);
-    height: clamp(50px, 8cqw, 80px);
-  }
-
-  .club-page-card-new-competition .club-name {
-    font-size: clamp(0.75rem, 1.1cqw, 1rem);
-  }
-
-  .club-socials-container {
-    height: 232px;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: 1rem!important;
-  }
-
-  .club-socials-container .club-social-list{
-    touch-action: pan-x;
-    color: rgb(0, 0, 0, 0);
-    -webkit-text-fill-color: white;
-    transition: color 0.5s;
-  }
-
-  .club-socials-container:hover .club-social-list{
-    color: lightblue;
-  }
-
-  .club-socials-container .club-social-list::-webkit-scrollbar{
-    border-radius: 10px;
-    height: 5px;
-    background-clip: padding-box;
-  }
-
-  .club-socials-container .club-social-list::-webkit-scrollbar-thumb{
-    border-radius: 10px;
-    box-shadow: inset 0 0 0 5px;
-  }
-
-  .club-social-circle {
-    display: block;
-    width: clamp(50px, var(--circle-size), 80px);
-    height: clamp(50px, var(--circle-size), 80px);
-  }
-
-  .club-admins-container {
-    max-height: 400px;
-    overflow-y: auto;
-    touch-action: pan-y;
-    color: rgb(0, 0, 0, 0);
-    -webkit-text-fill-color: white;
-    transition: color 0.5s;
-  }
-  
-  .club-admins-container:hover{
-    color: lightblue;
-  }
-
-  .club-admins-container::-webkit-scrollbar{
-    border-radius: 10px;
-    width: 5px;
-    background-clip: padding-box;
-  }
-
-  .club-admins-container::-webkit-scrollbar-thumb{
-    border-radius: 10px;
-    box-shadow: inset 0 0 0 5px;
-  }
-
-  .club-admin-avatar {
-    width: clamp(50px, 8cqw, 80px);
-    height: clamp(50px, 8cqw, 80px);
-  }
   

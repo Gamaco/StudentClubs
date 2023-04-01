@@ -73,6 +73,7 @@ DATABASES = {
         'NAME': 'studentclubsdb',
         'USER' : 'gaby',
         'PASSWORD' : '@Algoritm0'
+        # 'PASSWORD' : '123456'
     }
 }
 

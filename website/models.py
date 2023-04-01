@@ -5,7 +5,7 @@ from django.contrib.postgres.fields import ArrayField
 class Club(models.Model):
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
-    image = models.CharField(max_length=200, default="website\static\sc_nophoto.webp")
+    image = models.ImageField(upload_to='images/', max_length=250)
     created_at =  models.DateTimeField(auto_now_add=True)
     users_id = ArrayField(models.IntegerField(), null=True)
     school = models.CharField(max_length=50, default="undefined")

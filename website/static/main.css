@@ -77,6 +77,11 @@ h5 {
     line-height: .5 !important;
 }
 
+.btn.form-submission {
+  border-radius: 5px !important;
+  height: 60px !important;
+  width: 100px !important
+}
 .custom-hr {
     height: 5px;
     width: 100%;

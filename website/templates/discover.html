@@ -13,15 +13,15 @@
         <div class="form-group">
           <div class="container-fluid no-padding space-filler"></div>
           <h6>School Information</h6>
-          <input type="text" class="form-control" id="email" placeholder="School" name="email">
+          <input type="text" class="form-control custom-bg text-white btn-outline-secondary" id="email" placeholder="School" name="email">
         </div>
         <div class="form-group">
           <label for="pwd"></label>
-          <input type="text" class="form-control" id="pwd" placeholder="Country" name="pwd">
+          <input type="text" class="form-control custom-bg text-white btn-outline-secondary" id="pwd" placeholder="Country" name="pwd">
         </div>
         <div class="form-group">
           <label for="pwd"></label>
-          <input type="text" class="form-control" id="pwd" placeholder="Town" name="pwd">
+          <input type="text" class="form-control custom-bg text-white btn-outline-secondary" id="pwd" placeholder="Town" name="pwd">
         </div>
         <div class="container-fluid no-padding space-filler"></div>
         <button type="button" class="btn btn-outline-secondary">Update Search</button>
@@ -42,6 +42,7 @@
     <div class="row custom-height custom-padding flex-row flex-nowrap overflow-auto">
       <div class="card-row">
         <div class="card-col col-1 col-sm-1 col-md-1 col-lg-1 d-block d-lg-none"></div>
+        {% if social_count > 0 %}
         {% for club in clubs %}
         {% if club.category == 'Social'%}
         <div class="card-col col-10 col-sm-4 col-md-7 col-lg-5">
@@ -61,6 +62,22 @@
         </div>
         {% endif %}
         {% endfor %}
+        {% else %}
+        <div class="card-col col-10 col-sm-4 col-md-7 col-lg-5">
+          <div class="card custom-height custom-bg rounded" style="border: 2px solid #202020 !important;">
+            <img src="https://i.pinimg.com/564x/49/e5/8d/49e58d5922019b8ec4642a2e2b9291c2.jpg" class="card-img-top" alt="Club Image">
+            <div class="card-body">
+                <h7 class="card-title text-white">No student clubs found in this category.</h7>
+              <div class="custom-hr"></div>
+              <div class="card-footer">
+                <form>
+                </form>
+              </div>
+              <p class="card-text text-white">N/A</p>
+            </div>
+          </div>
+        </div>
+        {% endif %}
       </div>
       </div>
 
@@ -75,6 +92,7 @@
 <div class="row custom-height custom-padding flex-row flex-nowrap overflow-auto">
   <div class="card-row">
     <div class="card-col col-1 col-sm-1 col-md-1 col-lg-1 d-block d-lg-none"></div>
+    {% if sports_count > 0 %}
     {% for club in clubs %}
     {% if club.category == 'Sports'%}
     <div class="card-col col-10 col-sm-4 col-md-7 col-lg-5">
@@ -94,6 +112,22 @@
     </div>
     {% endif %}
     {% endfor %}
+    {% else %}
+    <div class="card-col col-10 col-sm-4 col-md-7 col-lg-5">
+      <div class="card custom-height custom-bg rounded" style="border: 2px solid #202020 !important;">
+        <img src="https://i.pinimg.com/564x/49/e5/8d/49e58d5922019b8ec4642a2e2b9291c2.jpg" class="card-img-top" alt="Club Image">
+        <div class="card-body">
+            <h7 class="card-title text-white">No student clubs found in this category.</h7>
+          <div class="custom-hr"></div>
+          <div class="card-footer">
+            <form>
+            </form>
+          </div>
+          <p class="card-text text-white">N/A</p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
   </div>
   </div>
 
@@ -108,6 +142,7 @@
 <div class="row custom-height custom-padding flex-row flex-nowrap overflow-auto">
   <div class="card-row">
     <div class="card-col col-1 col-sm-1 col-md-1 col-lg-1 d-block d-lg-none"></div>
+    {% if academic_count > 0 %}
     {% for club in clubs %}
     {% if club.category == 'Academic'%}
     <div class="card-col col-10 col-sm-4 col-md-7 col-lg-5">
@@ -127,6 +162,22 @@
     </div>
     {% endif %}
     {% endfor %}
+    {% else %}
+    <div class="card-col col-10 col-sm-4 col-md-7 col-lg-5">
+      <div class="card custom-height custom-bg rounded" style="border: 2px solid #202020 !important;">
+        <img src="https://i.pinimg.com/564x/49/e5/8d/49e58d5922019b8ec4642a2e2b9291c2.jpg" class="card-img-top" alt="Club Image">
+        <div class="card-body">
+            <h7 class="card-title text-white">No student clubs found in this category.</h7>
+          <div class="custom-hr"></div>
+          <div class="card-footer">
+            <form>
+            </form>
+          </div>
+          <p class="card-text text-white">N/A</p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
   </div>
   </div>
 
@@ -141,6 +192,7 @@
 <div class="row custom-height custom-padding flex-row flex-nowrap overflow-auto">
   <div class="card-row">
     <div class="card-col col-1 col-sm-1 col-md-1 col-lg-1 d-block d-lg-none"></div>
+    {% if hobbies_count > 0 %}
     {% for club in clubs %}
     {% if club.category == 'Hobbies'%}
     <div class="card-col col-10 col-sm-4 col-md-7 col-lg-5">
@@ -160,6 +212,22 @@
     </div>
     {% endif %}
     {% endfor %}
+    {% else %}
+    <div class="card-col col-10 col-sm-4 col-md-7 col-lg-5">
+      <div class="card custom-height custom-bg rounded" style="border: 2px solid #202020 !important;">
+        <img src="https://i.pinimg.com/564x/49/e5/8d/49e58d5922019b8ec4642a2e2b9291c2.jpg" class="card-img-top" alt="Club Image">
+        <div class="card-body">
+            <h7 class="card-title text-white">No student clubs found in this category.</h7>
+          <div class="custom-hr"></div>
+          <div class="card-footer">
+            <form>
+            </form>
+          </div>
+          <p class="card-text text-white">N/A</p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
   </div>
   </div>
 
@@ -174,6 +242,7 @@
 <div class="row custom-height custom-padding flex-row flex-nowrap overflow-auto">
   <div class="card-row">
     <div class="card-col col-1 col-sm-1 col-md-1 col-lg-1 d-block d-lg-none"></div>
+    {% if gaming_count > 0 %}
     {% for club in clubs %}
     {% if club.category == 'Gaming'%}
     <div class="card-col col-10 col-sm-4 col-md-7 col-lg-5">
@@ -193,6 +262,22 @@
     </div>
     {% endif %}
     {% endfor %}
+    {% else %}
+    <div class="card-col col-10 col-sm-4 col-md-7 col-lg-5">
+      <div class="card custom-height custom-bg rounded" style="border: 2px solid #202020 !important;">
+        <img src="https://i.pinimg.com/564x/49/e5/8d/49e58d5922019b8ec4642a2e2b9291c2.jpg" class="card-img-top" alt="Club Image">
+        <div class="card-body">
+            <h7 class="card-title text-white">No student clubs found in this category.</h7>
+          <div class="custom-hr"></div>
+          <div class="card-footer">
+            <form>
+            </form>
+          </div>
+          <p class="card-text text-white">N/A</p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
   </div>
   </div>
 

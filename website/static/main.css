@@ -149,6 +149,11 @@ h5 {
     padding: 0 !important;
 }
 
+.no-spaces {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
  .invisible {
     width: 100vw;
     height: 100vh;
@@ -240,6 +245,19 @@ h5 {
     .footer-dark .item.social {
       text-align:center;
       margin-top:20px;
+    }
+  }
+
+  @media only screen and (min-width: 991px) {
+    .card-col.col-10.col-sm-4.col-md-7.col-lg-5 {
+      margin-left: 2rem; /* for example */
+    }
+  }
+
+  @media only screen and (min-width: 480px) {
+    .my-element {
+      /* styles for screens larger than a phone */
+      grid-column: 1 / span 3; /* for example */
     }
   }
   

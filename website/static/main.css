@@ -1,19 +1,19 @@
 body {
-    background: rgb(61,53,53);
-    background: linear-gradient(90deg, rgba(61,53,53,1) 2%, rgba(41,48,52,1) 15%, rgba(56,60,62,1) 23%, rgba(48,40,40,1) 52%, rgba(37,37,37,1) 73%, rgba(56,60,62,1) 89%, rgba(61,53,53,1) 97%);
+  background: rgb(61,53,53);
+  background: linear-gradient(90deg, rgba(61,53,53,1) 2%, rgba(41,48,52,1) 15%, rgba(56,60,62,1) 23%, rgba(48,40,40,1) 52%, rgba(37,37,37,1) 73%, rgba(56,60,62,1) 89%, rgba(61,53,53,1) 97%);
 }
 
 .navbar-fixed {
-    /* position: fixed !important; */
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    /* height: 70px !important; */
-    z-index: 1000 !important;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.63) !important;
-    background: rgb(61,53,53);
-    background: linear-gradient(90deg, rgba(61,53,53,1) 2%, rgba(41,48,52,1) 15%, rgba(56,60,62,1) 23%, rgba(48,40,40,1) 52%, rgba(37,37,37,1) 73%, rgba(56,60,62,1) 89%, rgba(61,53,53,1) 97%);
-  }
+  /* position: fixed !important; */
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  /* height: 70px !important; */
+  z-index: 1000 !important;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.63) !important;
+  background: rgb(61,53,53);
+  background: linear-gradient(90deg, rgba(61,53,53,1) 2%, rgba(41,48,52,1) 15%, rgba(56,60,62,1) 23%, rgba(48,40,40,1) 52%, rgba(37,37,37,1) 73%, rgba(56,60,62,1) 89%, rgba(61,53,53,1) 97%);
+}
 
   .hidden-menu {
     background: rgb(61,53,53);
@@ -55,11 +55,15 @@ h5 {
 }
 
 .custom-bg {
-    background-color: #202020 !important;
+  background-color: #202020 !important;
 }
 
 .custom-bg-2 {
   background: #232323a8 !important;
+}
+
+.inputs-bg {
+  background: #2a2a2a !important;
 }
 
 .custom-textfield-bg {
@@ -77,6 +81,11 @@ h5 {
     line-height: .5 !important;
 }
 
+.btn.form-submission {
+  border-radius: 5px !important;
+  height: 60px !important;
+  width: 100px !important
+}
 .custom-hr {
     height: 5px;
     width: 100%;
@@ -90,7 +99,7 @@ h5 {
 }
 
 .row.custom-height {
-    height: 600px !important;
+    height: 610px !important;
 }
 
  .cards-carousel-header {
@@ -117,7 +126,7 @@ h5 {
 
  .navmenu-text.active {
   color: #ffffff !important;
-  box-shadow: 0px 10px 5px -5px rgba(86, 86, 86, 0.361) !important;
+  box-shadow: 0px 10px 5px -5px rgba(86, 86, 86, 0.89) !important;
  }
 
 .navmenu-text i {
@@ -142,6 +151,11 @@ h5 {
 .container-fluid.no-padding {
     margin: 0 !important;
     padding: 0 !important;
+}
+
+.no-spaces {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
  .invisible {
@@ -237,6 +251,19 @@ h5 {
       margin-top:20px;
     }
   }
+
+  @media only screen and (min-width: 991px) {
+    .card-col.col-10.col-sm-4.col-md-7.col-lg-5 {
+      margin-left: 2rem; /* for example */
+    }
+  }
+
+  @media only screen and (min-width: 480px) {
+    .my-element {
+      /* styles for screens larger than a phone */
+      grid-column: 1 / span 3; /* for example */
+    }
+  }
   
   .footer-dark .item.social > a {
     font-size:20px;
@@ -314,5 +341,65 @@ h5 {
   .card-wrapper .card:hover {
     -webkit-filter: brightness(80%);
     filter: brightness(80%);
+  }
+
+  .card-row {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+  .card-col {
+    flex: 0 0 auto;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .card {
+    margin-bottom: 1px;
+  }
+
+  .custom-height .card-img-top {
+    min-height: 300px;
+    max-height: 300px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-category-title, .social-count {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .social-count {
+    font-size: medium;
+  }
+
+  button.btn.button {
+    border-radius: 100rem;
+    padding: 1rem;
+    font-family: 'Avenir Next';
+    font-size: 1rem;
+    padding: .5rem 3rem;
+    color: black;
+    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(110deg, #ffffff, #ffffff, #ffffff);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #202020 inset;
+  }
+  
+  button.btn.button:hover {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(110deg, #777777, #777777, #777777);
+    box-shadow: none;
+    color: white;
+  }
+
+  .charCount {
+    color: rgb(164, 253, 164);
+    font-size: 13px;
+    font-weight: bold;
   }
   

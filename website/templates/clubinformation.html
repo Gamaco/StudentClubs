@@ -28,9 +28,9 @@
             <hr class="bg-secondary border-5 border-top border-secondary opacity-25">
         </div>
 
-        <div class="row">
+        <div class="row flex-column flex-md-row">
             <!-- Club actions and news -->
-            <div class="col-5">
+            <div class="col-lg-5 col-md-5 col-12">
                 <!-- Club actions -->
                 <div class="d-grid gap-2 pb-5">
                     <!-- Join Club button -->
@@ -71,7 +71,7 @@
                 </div>
 
                 <!-- Club news -->
-                <div class="card club-news-container w-100 bg-dark">
+                <div class="card club-news-container w-100 bg-dark mb-sm-0 mb-3" style="--bs-bg-opacity: 0.25;">
                     <div class="card-header border-0 pb-0 pt-3" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;">
                         <h3 class="m-0 club-page-card-title"><b>News</b></h3>
                         <hr class="bg-secondary border-5 border-top border-secondary opacity-25 mt-1">
@@ -81,8 +81,8 @@
 
                         <!-- New -->
                         <div class="p-2" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
-                            <div class="card-title">News title</div>
-                            <p class="card-text">
+                            <div class="club-news-card-title">News title</div>
+                            <p class="club-news-card-body-text">
                                 want to go other countries live the life
                             </p>
                             <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto">
@@ -90,8 +90,8 @@
 
                         <!-- New -->
                         <div class="p-2" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
-                            <div class="card-title">News title</div>
-                            <p class="card-text">
+                            <div class="club-news-card-title">News title</div>
+                            <p class="club-news-card-body-text">
                                 nah you cant because youre poor
                             </p>
                             <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto">
@@ -99,8 +99,8 @@
                         
                         <!-- New -->
                         <div class="p-2" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
-                            <div class="card-title">News title</div>
-                            <p class="card-text">
+                            <div class="club-news-card-title">News title</div>
+                            <p class="club-news-card-body-text">
                                 fuck money
                             </p>
                             <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto">
@@ -108,8 +108,8 @@
                         
                         <!-- New -->
                         <div class="p-2" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
-                            <div class="card-title">News title</div>
-                            <p class="card-text">
+                            <div class="club-news-card-title">News title</div>
+                            <p class="club-news-card-body-text">
                                 fuck money
                             </p>
                             <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto">
@@ -117,8 +117,8 @@
 
                         <!-- New -->
                         <div class="p-2" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
-                            <div class="card-title">News title</div>
-                            <p class="card-text">
+                            <div class="club-news-card-title">News title</div>
+                            <p class="club-news-card-body-text">
                                 fuck money
                             </p>
                             <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto">
@@ -128,10 +128,12 @@
                     
                 </div>
             </div>
+
             <!-- Club competitions and socials -->
-            <div class="col-7">
+            <div class="col-lg-7 col-md-7 col-12">
                 <!-- Club competitions -->
-                <div class="card club-news-container w-100 bg-dark mb-5">
+                <div class="card club-news-container w-100 bg-dark mb-3" style="--bs-bg-opacity: 0.25;">
+                    <!-- Title -->
                     <div class="card-header border-0 pb-0 pt-3" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;">
                         <div class="row">
                             <div class="col-9">
@@ -147,50 +149,51 @@
                         
                     </div>
                     
+                    <!-- New Competitions list -->
                     <div class="card-body pt-0" style="overflow-y: auto;">
 
                         <!-- New Competition -->
-                        <div class="row m-2 club-page-card-new-competition justify-content-center align-items-center" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
-                            <div class="col-lg-2 col-md-12">
-                                <avatar class="club-avatar bg-primary rounded-circle d-block float-none mx-auto"></avatar>
+                        <div class="row px-0 py-3 m-2 club-page-card-new-competition justify-content-center align-items-center" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
+                            <div class="col-2">
+                                <avatar class="club-new-competition-avatar bg-primary rounded-circle d-block float-none mx-auto"></avatar>
                             </div>
-                            <div class="col-lg-10 col-md-12">
-                                <p class="text-center text-wrap club-avatar-label m-0 club-name" ><b>Reading  LKJA  ASDLKJA SDLKJb</b></p>
+                            <div class="col-10">
+                                <p class="text-center text-wrap m-0 club-name" ><b>Reading  LKJA  ASDLKJA SDLKJb</b></p>
                             </div>
-                            <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto">
+                            <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto m-0">
                         </div>
 
                         <!-- New Competition -->
-                        <div class="row m-2 club-page-card-new-competition justify-content-center align-items-center" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
-                            <div class="col-lg-2 col-md-12">
-                                <avatar class="club-avatar bg-primary rounded-circle d-block float-none mx-auto"></avatar>
+                        <div class="row px-0 py-3 m-2 club-page-card-new-competition justify-content-center align-items-center" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
+                            <div class="col-2">
+                                <avatar class="club-new-competition-avatar bg-primary rounded-circle d-block float-none mx-auto"></avatar>
                             </div>
-                            <div class="col-lg-10 col-md-12">
-                                <p class="text-center text-wrap club-avatar-label m-0 club-name" ><b>Reading  LKJA  ASDLKJA SDLKJb</b></p>
+                            <div class="col-10">
+                                <p class="text-center text-wrap m-0 club-name" ><b>Reading  LKJA  ASDLKJA SDLKJb</b></p>
                             </div>
-                            <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto">
+                            <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto m-0">
                         </div>
                         
                         <!-- New Competition -->
-                        <div class="row m-2 club-page-card-new-competition justify-content-center align-items-center" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
-                            <div class="col-lg-2 col-md-12">
-                                <avatar class="club-avatar bg-primary rounded-circle d-block float-none mx-auto"></avatar>
+                        <div class="row px-0 py-3 m-2 club-page-card-new-competition justify-content-center align-items-center" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
+                            <div class="col-2">
+                                <avatar class="club-new-competition-avatar bg-primary rounded-circle d-block float-none mx-auto"></avatar>
                             </div>
-                            <div class="col-lg-10 col-md-12">
-                                <p class="text-center text-wrap club-avatar-label m-0 club-name" ><b>Reading  LKJA  ASDLKJA SDLKJb</b></p>
+                            <div class="col-10">
+                                <p class="text-center text-wrap m-0 club-name" ><b>Reading  LKJA  ASDLKJA SDLKJb</b></p>
                             </div>
-                            <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto">
+                            <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto m-0">
                         </div>
                         
                         <!-- New Competition -->
-                        <div class="row m-2 club-page-card-new-competition justify-content-center align-items-center" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
-                            <div class="col-lg-2 col-md-12">
-                                <avatar class="club-avatar bg-primary rounded-circle d-block float-none mx-auto"></avatar>
+                        <div class="row px-0 py-3 m-2 club-page-card-new-competition justify-content-center align-items-center" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
+                            <div class="col-2">
+                                <avatar class="club-new-competition-avatar bg-primary rounded-circle d-block float-none mx-auto"></avatar>
                             </div>
-                            <div class="col-lg-10 col-md-12">
-                                <p class="text-center text-wrap club-avatar-label m-0 club-name" ><b>Reading  LKJA  ASDLKJA SDLKJb</b></p>
+                            <div class="col-10">
+                                <p class="text-center text-wrap m-0 club-name" ><b>Reading  LKJA  ASDLKJA SDLKJb</b></p>
                             </div>
-                            <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto">
+                            <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto m-0">
                         </div>
 
                     </div>
@@ -198,34 +201,99 @@
                 </div>
 
                 <!-- Socials -->
-                <div class="position-relative club-socials-container row flex-row flex-nowrap gap-0 justify-content-left align-items-center" style="overflow-x: auto; --circle-size: 8cqw;">
-                    <div class="position-absolute top-0 start-0 club-page-card-title">
+                <div class="position-relative club-socials-container row flex-column justify-content-evenly bg-dark m-0 p-2" style="--circle-size: 8cqw; --bs-bg-opacity: 0.25;">
+                    <div class="col-12 top-0 start-0 club-page-card-title">
                         <b>Socials</b>
+                        <hr class="bg-secondary border-5 border-top border-secondary opacity-25 mt-1" style="height: 0px;">
                     </div>
-                    <div class="col-auto">
-                        <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+                    <div class="col-12">
+                        <div class="row club-social-list flex-row flex-nowrap gap-0 py-3 justify-content-left align-items-center" style="overflow-x: auto; box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
+                            <div class="col-auto">
+                                <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+                            </div>
+                            <div class="col-auto">
+                                <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+                            </div>
+                            <div class="col-auto">
+                                <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+                            </div>
+                            <div class="col-auto">
+                                <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+                            </div>
+                            <div class="col-auto">
+                                <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+                            </div>
+                            <div class="col-auto">
+                                <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+                            </div>
+                            <div class="col-auto">
+                                <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+                            </div>
+                            <div class="col-auto">
+                                <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-auto">
-                        <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+                    
+                    
+                </div>
+            </div>
+
+            <!-- Club Admins -->
+            <div class="col-12 pt-5">
+                <div>
+
+                </div>
+                <h3 class="club-page-card-title m-0">
+                    <b>Directive / Admins</b>
+                </h3>
+                <hr class="bg-secondary border-5 border-top border-secondary opacity-25 mt-1" >
+                <!-- Club Admins -->
+                <div class="club-admins-container" style="overflow-y: auto;">
+                    <!-- Admin -->
+                    <div class="row px-0 py-3 m-2 club-page-card-new-competition justify-content-center align-items-center" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
+                        <div class="col-2">
+                            <avatar class="club-admin-avatar bg-primary rounded-circle d-block float-none mx-auto"></avatar>
+                        </div>
+                        <div class="col-10">
+                            <p class="text-center text-wrap m-0 club-name" ><b> Reading AFJLHKLJKHAFSJKLHASF JHLAFF</b></p>
+                        </div>
+                        <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto m-0">
                     </div>
-                    <div class="col-auto">
-                        <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+
+                    <!-- Admin -->
+                    <div class="row px-0 py-3 m-2 club-page-card-new-competition justify-content-center align-items-center" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
+                        <div class="col-2">
+                            <avatar class="club-admin-avatar bg-primary rounded-circle d-block float-none mx-auto"></avatar>
+                        </div>
+                        <div class="col-10">
+                            <p class="text-center text-wrap m-0 club-name" ><b> Reading AFJLHKLJKHAFSJKLHASF JHLAFF</b></p>
+                        </div>
+                        <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto m-0">
                     </div>
-                    <div class="col-auto">
-                        <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+
+                    <!-- Admin -->
+                    <div class="row px-0 py-3 m-2 club-page-card-new-competition justify-content-center align-items-center" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
+                        <div class="col-2">
+                            <avatar class="club-admin-avatar bg-primary rounded-circle d-block float-none mx-auto"></avatar>
+                        </div>
+                        <div class="col-10">
+                            <p class="text-center text-wrap m-0 club-name" ><b> Reading AFJLHKLJKHAFSJKLHASF JHLAFF</b></p>
+                        </div>
+                        <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto m-0">
                     </div>
-                    <div class="col-auto">
-                        <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
+
+                    <!-- Admin -->
+                    <div class="row px-0 py-3 m-2 club-page-card-new-competition justify-content-center align-items-center" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;">
+                        <div class="col-2">
+                            <avatar class="club-admin-avatar bg-primary rounded-circle d-block float-none mx-auto"></avatar>
+                        </div>
+                        <div class="col-10">
+                            <p class="text-center text-wrap m-0 club-name" ><b> Reading AFJLHKLJKHAFSJKLHASF JHLAFF</b></p>
+                        </div>
+                        <hr class="bg-secondary border-5 border-top border-secondary opacity-25 w-50 mx-auto m-0">
                     </div>
-                    <div class="col-auto">
-                        <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
-                    </div>
-                    <div class="col-auto">
-                        <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
-                    </div>
-                    <div class="col-auto">
-                        <avatar class="club-social-circle bg-primary rounded-circle"></avatar>
-                    </div>
+
                 </div>
             </div>
         </div>

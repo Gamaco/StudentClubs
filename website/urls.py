@@ -8,7 +8,4 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('discover/', views.discover, name='discover'),
     path('joined/', views.joined, name='joined'),
-    path('club-creation/', views.club_creation, name='club-creation')
-]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

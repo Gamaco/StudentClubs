@@ -27,11 +27,14 @@
           <!-- Space before content -->
           <div class="container-fluid no-padding space-filler"></div><br>
 
-          <div class="card custom-bg-2 text-white">
+          <div class="card custom-bg-2 text-white justify-content-center">
             <div class="card-body justify-content-center">
               <h3 class="card-title">Create your own club</h3>
               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="/club-creation" class="btn btn-primary">Create</a>
+              <div class="container" style="align-items: center; justify-content: center;">
+              <a href="/club-creation" class="btn btn-primary pt-2" style="max-width: 100px; width: 50%; max-height: 100px; height: 70%; text-align: center;
+              align-items: center; justify-content: center;">Create</a>
+            </div>
             </div>
           </div>
 
@@ -40,7 +43,7 @@
             <div class="card custom-bg" data-card-id="{{ club.id }}">
               <div class="row g-0">
                 <div class="col-3">
-                  <img src={{ club.image }} class="img-fluid rounded-start h-100 w-100" alt="..."
+                  <img src="{{ club.image.url }}" class="img-fluid rounded-start h-100 w-100" alt="..."
                     style="object-fit: cover; min-height: 100%;">
                 </div>
                 <div class="col-9">
@@ -69,7 +72,10 @@
             <div class="card-body">
               <h3 class="card-title">Create a new event</h3>
               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Create</a>
+              <div class="container" style="align-items: center; justify-content: center;">
+                <a href="#" class="btn btn-primary pt-2" style="max-width: 100px; width: 50%; max-height: 100px; height: 70%; text-align: center;
+                align-items: center; justify-content: center;">Create</a>
+              </div>
             </div>
           </div>
         </div>

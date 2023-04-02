@@ -88,13 +88,11 @@
 
 <script>
   document.querySelectorAll('[data-card-id]').forEach(card => {
-    const cardId = card.dataset.cardId;
+    const clubId = card.dataset.cardId;
 
     card.addEventListener('click', function () {
-      // Get the URL of the destination page for this card
-      // const destinationUrl = `http://www.example.com/cards/${cardId}`;
 
-      const destinationUrl = `../discover/`;
+      const destinationUrl = `../clubinformation/${clubId}`;
 
       // Navigate to the new page
       window.location.href = destinationUrl;

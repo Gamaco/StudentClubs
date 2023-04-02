@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import *
 
 # Create your views here.
@@ -32,8 +32,11 @@ def joined(request):
         'Clubs' : clubs
     })
 
-def clubinformation(request):
-    return render(request, 'clubinformation.html')
+def clubinformation(request, c_id):
+    club = get_object_or_404(Club, id=c_id)
+    return render(request, 'clubinformation.html', {
+        'club' : club
+    })
 
 def club_creation(request):
     if request.method == 'POST':

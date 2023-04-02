@@ -10,7 +10,7 @@ urlpatterns = [
     path('discover/', views.discover, name='discover'),
     path('joined/', views.joined, name='joined'),
     path('club-creation/', views.club_creation, name='club-creation'),
-    path('clubinformation/', views.clubinformation, name='clubinformation')
+    path('clubinformation/<int:c_id>', views.clubinformation, name='clubinformation')
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

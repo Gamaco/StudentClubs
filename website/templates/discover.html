@@ -24,7 +24,7 @@
           <input type="text" class="form-control inputs-bg text-white btn-outline-secondary" id="pwd" placeholder="Town" name="pwd">
         </div>
         <div class="container-fluid no-padding space-filler"></div>
-        <button type="button" class="btn btn-info">Update Search</button>
+        <button type="button" class="btn btn-info"><b>Update Search</b></button>
         <div class="container-fluid no-padding space-filler"></div>
       </form>
     </div>
@@ -53,7 +53,7 @@
               <div class="custom-hr"></div>
               <div class="card-footer">
                 <form>
-                  <button class="btn btn-outline-secondary">View</button>
+                  <a class="btn btn-info pt-2" href="{% url 'clubinformation' club.id %}"><b>View</b></a>
                 </form>
               </div>
               <p class="card-text text-white">{{ club.description }}</p>
@@ -103,7 +103,7 @@
           <div class="custom-hr"></div>
           <div class="card-footer">
             <form>
-              <a class="btn btn-outline-secondary" role="button" href="/clubinformation">View</a>
+              <a class="btn btn-info pt-2" href="{% url 'clubinformation' club.id %}"><b>View</b></a>
             </form>
           </div>
           <p class="card-text text-white">{{ club.description }}</p>
@@ -153,7 +153,7 @@
           <div class="custom-hr"></div>
           <div class="card-footer">
             <form>
-              <button class="btn btn-outline-secondary">View</button>
+              <a class="btn btn-info pt-2" href="{% url 'clubinformation' club.id %}"><b>View</b></a>
             </form>
           </div>
           <p class="card-text text-white">{{ club.description }}</p>
@@ -203,7 +203,7 @@
           <div class="custom-hr"></div>
           <div class="card-footer">
             <form>
-              <button class="btn btn-outline-secondary">View</button>
+              <a class="btn btn-info pt-2" href="{% url 'clubinformation' club.id %}"><b>View</b></a>
             </form>
           </div>
           <p class="card-text text-white">{{ club.description }}</p>
@@ -253,7 +253,7 @@
           <div class="custom-hr"></div>
           <div class="card-footer">
             <form>
-              <button class="btn btn-outline-secondary">View</button>
+              <a class="btn btn-info pt-2" href="{% url 'clubinformation' club.id %}"><b>View</b></a>
             </form>
           </div>
           <p class="card-text text-white">{{ club.description }}</p>

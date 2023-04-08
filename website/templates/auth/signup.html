@@ -1,0 +1,76 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div style="max-width: 1000px; margin: 0 auto;">
+
+    <div class="container-fluid rounded text-white custom-bg-2 ms-auto">
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <!-- Space before content -->
+            <div class="container-fluid no-padding space-filler"></div>
+
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="form-outline">
+                        <input type="text" name="fname" id="form6Example1" class="form-control inputs-bg btn-outline-secondary text-white" required />
+                        <label class="form-label text-white" for="form6Example1">First name</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-outline">
+                        <input type="text" name="sname" id="form6Example2" class="form-control inputs-bg btn-outline-secondary text-white"
+                            required />
+                        <label class="form-label text-white" for="form6Example2">Last name</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input -->
+            <div class="form-outline mb-4">
+                <input type="text" name="sname" id="form6Example3" class="form-control inputs-bg btn-outline-secondary text-white" required />
+                <label class="form-label text-white" for="form6Example3">School name</label>
+            </div>
+
+            <!-- Country input -->
+            <div class="form-outline mb-4">
+                <input type="text" name="country" id="form6Example3" class="form-control inputs-bg btn-outline-secondary text-white" required />
+                <label class="form-label text-white" for="form6Example3">Country</label>
+            </div>
+
+            <!-- City input -->
+            <div class="form-outline mb-4">
+                <input type="text" name="city" id="form6Example3" class="form-control inputs-bg btn-outline-secondary text-white" required />
+                <label class="form-label text-white" for="form6Example3">City</label>
+            </div>
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <input type="email" name="email" id="form6Example5" class="form-control inputs-bg btn-outline-secondary text-white" required />
+                <label class="form-label text-white" for="form6Example5">Email</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <input type="password" name="password1" id="password1" class="form-control inputs-bg btn-outline-secondary text-white" required/>
+                <label class="form-label" for="password1">Password</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <input type="password" name="password2" id="password2" class="form-control inputs-bg btn-outline-secondary text-white" required/>
+                <label class="form-label" for="password2">Password Confirmation</label>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn btn-info btn-block mb-4">Create</button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

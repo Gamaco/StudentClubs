@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.models import User
+from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.decorators import login_required
 from .models import *
 
 # Create your views here.
-
 
 def home(request):
     return render(request, 'index.html')
@@ -62,3 +64,61 @@ def club_creation(request):
         return render(request, 'joined.html')
     else:
         return render(request, 'club-creation.html')
+    
+
+def signup(request):
+    if request.method == 'GET':
+        return render(request, 'auth/signup.html')
+    else:
+        if request.POST['password1'] == request.POST['password2']:
+            # Register
+            try:
+
+                #Crear User
+                user = User.objects.create_user(
+                username=request.POST['email'], 
+                password=request.POST['password1'])
+
+                user.save()
+
+                #login
+                login(request, user)
+
+                #Redirect to the page shown after logging in.
+                return render(request, 'discover.html', {
+                    'message': f"User created succesfully {user.get_username()}"
+                })
+            except:
+                #if the username already exists throws exception.
+                return render(request, 'auth/signup.html', {
+                    'error': 'Username already exists.'
+                })
+        #In the event that passwords do not match.
+        return render(request, 'signup.html', {
+            'error': 'Passwords do not match'
+        })
+
+@login_required   
+def signout(request):
+    logout(request)
+    return render(request, 'signin.html')
+
+
+def signin(request):
+    if request.method == 'GET':
+        return render(request, 'signin.html', {
+            'form': AuthenticationForm
+        })
+    else:
+        user = authenticate(request, username=request.POST['username'], password=request.POST['password'])
+        if user is None:
+            return render(request, 'signin.html', {
+                'form': AuthenticationForm,
+                'error' : "Username or password is incorrect"
+            })
+        else:
+            login(request, user)
+            return render(request, 'index.html', {
+                'form': AuthenticationForm,
+                'message' : f"Welcome back {user.get_username()}!"
+            })

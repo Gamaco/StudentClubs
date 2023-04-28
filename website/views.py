@@ -76,7 +76,7 @@ def signup(request):
                 login(request, user)
 
                 #Redirect to the page shown after logging in.
-                return render(request, 'discover.html')
+                return loadDiscoverPage(request)
             except:
                 #if the username already exists throws exception.
                 return render(request, 'auth/signup.html', {

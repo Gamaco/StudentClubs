@@ -2,8 +2,8 @@ body {
   overflow-x: hidden !important;
   overflow-y: scroll !important;
   -webkit-overflow-scrolling: touch !important;
-  background-color: rgb(61,53 ,53) !important;
-  background: rgb(61,53,53);
+  background-color: #202020 !important;
+  background: #202020;
   background: linear-gradient(90deg, rgba(61,53,53,1) 2%, rgba(41,48,52,1) 15%, rgba(56,60,62,1) 23%, rgba(48,40,40,1) 52%, rgba(37,37,37,1) 73%, rgba(56,60,62,1) 89%, rgba(61,53,53,1) 97%);
 }
 
@@ -27,6 +27,11 @@ body {
 h5 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10px !important;
+}
+
+.title-container {
+  max-height: 50px !important;
+  height: 100% !important;
 }
 
 .icon {

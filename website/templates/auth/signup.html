@@ -20,42 +20,47 @@
               <form method="POST">
                 {% csrf_token %}
                 <div class="form-outline mb-4">
-                  <input name="fname" type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                  <input name="fname" type="text" id="form3Example1cg" class="form-control form-control-lg" required  />
                   <label class="form-label text-white" for="form3Example1cg">First Name</label>
                 </div>
 
                 <div class="form-outline mb-4">
-                    <input name="lname" type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                    <input name="lname" type="text" id="form3Example1cg" class="form-control form-control-lg" required/>
                     <label class="form-label text-white" for="form3Example1cg">Last Name</label>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input name="city" type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                    <input name="city" type="text" id="form3Example1cg" class="form-control form-control-lg" required/>
                     <label class="form-label text-white" for="form3Example1cg">City</label>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input name="country" type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                    <input name="country" type="text" id="form3Example1cg" class="form-control form-control-lg" required/>
                     <label class="form-label text-white" for="form3Example1cg">Country</label>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input name="school" type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                    <input name="school" type="text" id="form3Example1cg" class="form-control form-control-lg" required/>
                     <label class="form-label text-white" for="form3Example1cg">School Name</label>
                   </div>
 
+                  <div class="form-outline mb-4">
+                    <input name="username" type="text" id="form3Example3cg" class="form-control form-control-lg" required/>
+                    <label class="form-label text-white" for="form3Example3cg">Username</label>
+                  </div>
+
                 <div class="form-outline mb-4">
-                  <input name="email" type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                  <input name="email" type="email" id="form3Example3cg" class="form-control form-control-lg" required/>
                   <label class="form-label text-white" for="form3Example3cg">Your Email</label>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input name="password1" type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                  <input name="password1" type="password" id="form3Example4cg" class="form-control form-control-lg" required/>
                   <label class="form-label text-white" for="form3Example4cg">Password</label>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input name="password2" type="password" id="form3Example4cdg" class="form-control form-control-lg" />
+                  <input name="password2" type="password" id="form3Example4cdg" class="form-control form-control-lg" required/>
                   <label class="form-label text-white" for="form3Example4cdg">Repeat your password</label>
                 </div>
 

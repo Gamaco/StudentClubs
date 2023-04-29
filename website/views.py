@@ -67,10 +67,25 @@ def signup(request):
 
                 #Crear User
                 user = User.objects.create_user(
-                username=request.POST['email'], 
-                password=request.POST['password1'])
+                username=request.POST['username'], 
+                password=request.POST['password1'],
+                first_name=request.POST['fname'],
+                last_name=request.POST['lname'],
+                email=request.POST['email'])
 
-                user.save()
+                # Create a new user profile object
+                profile = UserProfile()
+                
+                # Set user field to the user being created
+                profile.user = user
+                
+                # Add user data
+                profile.City = request.POST['city']
+                profile.Country = request.POST['country']
+                profile.School = request.POST['school']
+                
+                # Save
+                profile.save()
 
                 #login
                 login(request, user)

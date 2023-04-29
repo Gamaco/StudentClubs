@@ -1,74 +1,92 @@
-{% extends 'layouts/base.html' %}
+{% extends 'layouts/auth-base.html' %}
 
 {% load static %}
 
 {% block content %}
 <div style="max-width: 1000px; margin: 0 auto;">
 
-    <div class="container-fluid rounded text-white custom-bg-2 ms-auto">
+    <!-- Space before content -->
+    <div class="container-fluid no-padding space-filler big" style="height: 60px !important;"></div>
 
-        <form method="POST">
-            {% csrf_token %}
-
-            <!-- Space before content -->
-            <div class="container-fluid no-padding space-filler"></div>
-
-            <!-- 2 column grid layout with text inputs for the first and last names -->
-            <div class="row mb-4">
-                <div class="col">
-                    <div class="form-outline">
-                        <input type="text" name="fname" id="form6Example1" class="form-control inputs-bg btn-outline-secondary text-white" required />
-                        <label class="form-label text-white" for="form6Example1">First name</label>
-                    </div>
+<section>
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-15">
+          <div class="card custom-bg" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center text-white mb-5">Create an account</h2>
+              <h3 class="text-danger">{{ error }}</h3>
+              <form method="POST">
+                {% csrf_token %}
+                <div class="form-outline mb-4">
+                  <input name="fname" type="text" id="form3Example1cg" class="form-control form-control-lg" required  />
+                  <label class="form-label text-white" for="form3Example1cg">First Name</label>
                 </div>
-                <div class="col">
-                    <div class="form-outline">
-                        <input type="text" name="sname" id="form6Example2" class="form-control inputs-bg btn-outline-secondary text-white"
-                            required />
-                        <label class="form-label text-white" for="form6Example2">Last name</label>
-                    </div>
+
+                <div class="form-outline mb-4">
+                    <input name="lname" type="text" id="form3Example1cg" class="form-control form-control-lg" required/>
+                    <label class="form-label text-white" for="form3Example1cg">Last Name</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input name="city" type="text" id="form3Example1cg" class="form-control form-control-lg" required/>
+                    <label class="form-label text-white" for="form3Example1cg">City</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input name="country" type="text" id="form3Example1cg" class="form-control form-control-lg" required/>
+                    <label class="form-label text-white" for="form3Example1cg">Country</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input name="school" type="text" id="form3Example1cg" class="form-control form-control-lg" required/>
+                    <label class="form-label text-white" for="form3Example1cg">School Name</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input name="username" type="text" id="form3Example3cg" class="form-control form-control-lg" required/>
+                    <label class="form-label text-white" for="form3Example3cg">Username</label>
+                  </div>
+
+                <div class="form-outline mb-4">
+                  <input name="email" type="email" id="form3Example3cg" class="form-control form-control-lg" required/>
+                  <label class="form-label text-white" for="form3Example3cg">Your Email</label>
                 </div>
-            </div>
 
-            <!-- Text input -->
-            <div class="form-outline mb-4">
-                <input type="text" name="sname" id="form6Example3" class="form-control inputs-bg btn-outline-secondary text-white" required />
-                <label class="form-label text-white" for="form6Example3">School name</label>
-            </div>
+                <div class="form-outline mb-4">
+                  <input name="password1" type="password" id="form3Example4cg" class="form-control form-control-lg" required/>
+                  <label class="form-label text-white" for="form3Example4cg">Password</label>
+                </div>
 
-            <!-- Country input -->
-            <div class="form-outline mb-4">
-                <input type="text" name="country" id="form6Example3" class="form-control inputs-bg btn-outline-secondary text-white" required />
-                <label class="form-label text-white" for="form6Example3">Country</label>
-            </div>
+                <div class="form-outline mb-4">
+                  <input name="password2" type="password" id="form3Example4cdg" class="form-control form-control-lg" required/>
+                  <label class="form-label text-white" for="form3Example4cdg">Repeat your password</label>
+                </div>
 
-            <!-- City input -->
-            <div class="form-outline mb-4">
-                <input type="text" name="city" id="form6Example3" class="form-control inputs-bg btn-outline-secondary text-white" required />
-                <label class="form-label text-white" for="form6Example3">City</label>
-            </div>
+                <div class="form-check d-flex justify-content-center mb-5">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" required/>
+                  <label class="form-check-label text-white" for="form2Example3g">
+                    I agree all statements in <a href="#!" class="text-white"><u>Terms of service</u></a>
+                  </label>
+                </div>
 
-            <!-- Email input -->
-            <div class="form-outline mb-4">
-                <input type="email" name="email" id="form6Example5" class="form-control inputs-bg btn-outline-secondary text-white" required />
-                <label class="form-label text-white" for="form6Example5">Email</label>
-            </div>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-outline-light btn-lg px-5" type="submit">Create</button>
+                </div>
 
-            <!-- Password input -->
-            <div class="form-outline mb-4">
-                <input type="password" name="password1" id="password1" class="form-control inputs-bg btn-outline-secondary text-white" required/>
-                <label class="form-label" for="password1">Password</label>
-            </div>
+                <p class="text-center text-white mt-5 mb-0">Have already an account? <a href="/signin"
+                    class="fw-bold text-white"><u>Login here</u></a></p>
 
-            <!-- Password input -->
-            <div class="form-outline mb-4">
-                <input type="password" name="password2" id="password2" class="form-control inputs-bg btn-outline-secondary text-white" required/>
-                <label class="form-label" for="password2">Password Confirmation</label>
-            </div>
+              </form>
 
-            <!-- Submit button -->
-            <button type="submit" class="btn btn btn-info btn-block mb-4">Create</button>
-        </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     </div>
 </div>

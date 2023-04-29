@@ -3,30 +3,19 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from .models import *
+from .db_funcs import *
 
 # Create your views here.
 
+@login_required
 def home(request):
     return render(request, 'index.html')
 
-
+@login_required
 def discover(request):
-    gaming_count = Club.objects.filter(category='Gaming')
-    hobbies_count = Club.objects.filter(category='Hobbies')
-    academic_count = Club.objects.filter(category='Academic')
-    sports_count = Club.objects.filter(category='Sports')
-    social_count = Club.objects.filter(category='Social')
-    objects = Club.objects.all()
-    return render(request, 'discover.html', {
-        'clubs': objects,
-        'social_count': len(social_count),
-        'hobbies_count': len(hobbies_count),
-        'academic_count': len(academic_count),
-        'gaming_count': len(gaming_count),
-        'sports_count': len(sports_count),
-    })
+    return loadDiscoverPage(request)
 
-
+@login_required
 def joined(request):
     user_id = 1
     clubs = Club.objects.filter(users_id__contains=[user_id])
@@ -34,12 +23,14 @@ def joined(request):
         'Clubs' : clubs
     })
 
+@login_required
 def clubinformation(request, c_id):
     club = get_object_or_404(Club, id=c_id)
     return render(request, 'clubinformation.html', {
         'club' : club
     })
 
+@login_required
 def club_creation(request):
     if request.method == 'POST':
         data = request.POST
@@ -76,18 +67,31 @@ def signup(request):
 
                 #Crear User
                 user = User.objects.create_user(
-                username=request.POST['email'], 
-                password=request.POST['password1'])
+                username=request.POST['username'], 
+                password=request.POST['password1'],
+                first_name=request.POST['fname'],
+                last_name=request.POST['lname'],
+                email=request.POST['email'])
 
-                user.save()
+                # Create a new user profile object
+                profile = UserProfile()
+                
+                # Set user field to the user being created
+                profile.user = user
+                
+                # Add user data
+                profile.City = request.POST['city']
+                profile.Country = request.POST['country']
+                profile.School = request.POST['school']
+                
+                # Save
+                profile.save()
 
                 #login
                 login(request, user)
 
                 #Redirect to the page shown after logging in.
-                return render(request, 'discover.html', {
-                    'message': f"User created succesfully {user.get_username()}"
-                })
+                return loadDiscoverPage(request)
             except:
                 #if the username already exists throws exception.
                 return render(request, 'auth/signup.html', {
@@ -101,24 +105,18 @@ def signup(request):
 @login_required   
 def signout(request):
     logout(request)
-    return render(request, 'signin.html')
+    return render(request, 'auth/signin.html')
 
 
 def signin(request):
     if request.method == 'GET':
-        return render(request, 'signin.html', {
-            'form': AuthenticationForm
-        })
+        print("Get Method Reached")
+        return render(request, 'auth/signin.html')
     else:
+        print("POST Method Reached")
         user = authenticate(request, username=request.POST['username'], password=request.POST['password'])
         if user is None:
-            return render(request, 'signin.html', {
-                'form': AuthenticationForm,
-                'error' : "Username or password is incorrect"
-            })
+            return render(request, 'auth/signin.html')
         else:
             login(request, user)
-            return render(request, 'index.html', {
-                'form': AuthenticationForm,
-                'message' : f"Welcome back {user.get_username()}!"
-            })
+            return loadDiscoverPage(request)

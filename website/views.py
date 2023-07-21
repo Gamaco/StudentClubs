@@ -120,3 +120,6 @@ def signin(request):
         else:
             login(request, user)
             return loadDiscoverPage(request)
+        
+def profile(request):
+    return render(request, 'profile.html')
